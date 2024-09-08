@@ -1,0 +1,598 @@
+/* CSS Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Variables */
+:root {
+    --normal-text-size: 1.5rem;
+    --primary-color: #1e1e1e; /* Dark color for text */
+    --background-color: #f5f5f5; /* Light gray background */
+    --accent-color: #61dafb; /* Accent color */
+    --hover-color: #282c34; /* Darker color for hover effect */
+    --text-shadow-color: rgba(0, 0, 0, 0.3); /* Subtle shadow to enhance text readability */
+}
+
+/* Navbar Section */
+nav {
+    height: 10vh;
+    background: linear-gradient(135deg, #333, #1e1e1e); /* Gradient for a modern look */
+    display: flex;
+    align-items: center;
+    padding: 0 2rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adds depth with a stronger shadow */
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    transition: background 0.3s ease-in-out; /* Smooth background transition */
+}
+
+/* Add subtle animation effect on hover */
+nav:hover {
+    background: linear-gradient(135deg, #1e1e1e, #333);
+}
+
+ul {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+/* List Item Styles */
+nav ul li {
+    list-style: none;
+    position: relative; /* For underline hover effect */
+}
+
+/* Link Styles */
+nav ul li a {
+    font-size: var(--normal-text-size);
+    font-weight: 600;
+    text-decoration: none;
+    color: var(--accent-color);
+    padding: 0.5rem 1rem;
+    transition: color 0.3s ease, transform 0.3s ease, line-height 0.3s ease; /* Added line-height transition */
+    text-shadow: 0 1px 2px var(--text-shadow-color); /* Adds a subtle shadow to enhance readability */
+}
+
+/* Unique Underline Hover Effect */
+nav ul li a::after {
+    content: "";
+    display: block;
+    height: 3px;
+    background: var(--accent-color);
+    width: 0;
+    transition: width 0.4s ease;
+    position: absolute;
+    left: 0;
+    bottom: -5px; /* Adjust to make it closer to the text */
+}
+
+nav ul li a:hover {
+    /* color: var(--hover-color); Darker color on hover */
+    transform: translateY(-2px); /* Slightly lifts the text on hover */
+    line-height: 1.5rem; /* Adjusted line-height on hover */
+}
+
+nav ul li a:hover::after {
+    width: 100%; /* Expands underline fully on hover */
+}
+
+/* Logo Styling (Optional) */
+nav .logo {
+    font-size: 2rem;
+    font-weight: 800;
+    color: var(--accent-color);
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+nav .logo:hover {
+    transform: rotate(-5deg) scale(1.1); /* Subtle rotation and scaling for a playful effect */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    nav {
+        padding: 0 1rem;
+    }
+
+    ul {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav ul li {
+        margin-bottom: 1rem;
+    }
+
+    nav ul li a {
+        padding: 1rem;
+    }
+}
+
+/* Home Section Styling */
+.home-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; /* Full viewport height */
+    background: linear-gradient(135deg, #f5f5f5, #e0e0e0); /* Subtle gradient background */
+    padding: 0 2rem;
+}
+
+.home-content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px; /* Maximum width for the content */
+    width: 100%;
+    gap: 2rem; /* Space between text and image */
+}
+
+
+
+
+
+.home-text p {
+    font-size: 1.2rem;
+    color: #666;
+    margin-bottom: 2rem;
+}
+
+.btn-primary {
+    display: inline-block;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #fff;
+    background-color:  #333; /* Blue button background */
+    padding: 0.75rem 1.5rem;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+.home-image {
+    flex: 1;
+    max-width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.home-image img {
+    width: 100%;
+    max-width: 400px; /* Max width for profile image */
+    border-radius: 50%; /* Circular profile image */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+}
+
+
+.home-text h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    color: #333;
+    animation: text-glow 1.5s ease-in-out infinite; /* Animated glow effect */
+    margin-bottom: 1rem;
+}
+.home-text h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    color: #333;
+    position: relative;
+    margin-bottom: 1rem;
+}
+
+.home-text h1::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 4px;
+    background: #007bff; /* Color of the underline */
+    transition: width 0.3s ease-in-out; /* Smooth transition effect */
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+}
+
+.home-text h1:hover::after {
+    width: 100%; /* Expand underline on hover */
+}
+
+
+.home-text h1 span{
+    font-size: 3rem;
+    font-weight: 700;
+    background: #007bff; /* Gradient color */
+    -webkit-background-clip: text; /* Apply gradient to text */
+    -webkit-text-fill-color: transparent; /* Make the text color transparent */
+    margin-bottom: 1rem;
+    position: relative;
+}
+
+/* About Section Styling */
+.about-section {
+    background-color: #f9f9f9; /* Light background for contrast */
+    padding: 4rem 2rem; /* Padding for spacing */
+}
+
+.about-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* About Section Styling */
+.about-section {
+    background-color: #f9f9f9;
+    padding: 4rem 2rem;
+}
+
+.about-content
+ {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Text and Image Layout */
+.about-text {
+    flex: 2;
+    max-width: 100%;
+}
+
+.about-text h2,
+.projects-section h2{
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+.about-text p {
+    font-size: 1.1rem;
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+.about-image {
+    flex: 1;
+    max-width: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-image img {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border: 2px solid #007bff;
+}
+
+/* Call to Action */
+.about-cta {
+    margin-top: 2rem;
+    text-align: center;
+}
+
+.about-cta p {
+    font-size: 1.2rem;
+    color: #333;
+}
+
+.about-cta a {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.about-cta a:hover {
+    text-decoration: underline;
+}
+/* Career Timeline Styling */
+.career-timeline {
+    background-color: #f9f9f9;
+    padding: 4rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.career-timeline h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #333;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+/* .timeline {
+    position: relative;
+    padding: 1rem 0;
+}
+
+.timeline::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    height: 100%;
+    border-left: 2px solid #007bff;
+    top: 0;
+    transform: translateX(-50%);
+} */
+
+.timeline-item {
+    position: relative;
+    margin: 1rem 0;
+}
+
+.timeline-content {
+    background-color: #fff;
+    border: 2px solid #007bff;
+    border-radius: 8px;
+    padding: 1.5rem;
+    position: relative;
+    width: 45%;
+    margin-left: 22%;
+    transform: translateX(-50%);
+}
+
+.timeline-content h3 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 0.5rem;
+}
+
+.timeline-content h4 {
+    font-size: 1.2rem;
+    color: #666;
+    margin-bottom: 1rem;
+}
+
+.timeline-content p {
+    font-size: 1rem;
+    color: #333;
+    margin-bottom: 0.5rem;
+}
+
+.timeline-content strong {
+    color: #007bff;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .timeline {
+        padding: 0;
+    }
+
+    .timeline-content {
+        width: 100%;
+        margin-left: 0;
+        transform: none;
+    }
+
+    .timeline::before {
+        display: none;
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .about-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .about-text,
+    .about-image {
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .about-image {
+        margin-top: 2rem;
+    }
+}
+
+
+/* Terminal Container */
+#projects{
+    height: 100vh;  
+    background-color:  #f9f9f9;
+}
+.terminal-container {
+    width: 90%;
+    
+    max-width: 800px;
+    margin: 0 auto;
+    background: #1e1e1e;
+    color: #c5c5c5;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    font-family: 'Courier New', Courier, monospace;
+    overflow: hidden;
+   
+  }
+  
+  /* Terminal Header */
+  .terminal-header {
+    background: #333;
+    padding: 10px;
+    color: #f8f8f2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid #444;
+  }
+  
+  .terminal-title {
+    font-weight: bold;
+  }
+  
+  /* Terminal Body */
+  .terminal-body {
+    padding: 15px;
+    height: 400px;
+    overflow-y: auto;
+  }
+  
+  /* Terminal Output */
+  .terminal-output {
+    margin-bottom: 10px;
+  }
+  
+  .command {
+    color: #00ff00;
+  }
+  
+  /* Terminal Input */
+  .terminal-input {
+    display: flex;
+    align-items: center;
+  }
+  
+  .prompt {
+    margin-right: 5px;
+    color: #00ff00;
+  }
+  
+  #command-input {
+    background: none;
+    border: none;
+    color: #c5c5c5;
+    outline: none;
+    width: 100%;
+  }
+  
+  #command-input::placeholder {
+    color: #555;
+  }
+  
+  /* Easter Egg Command Highlight */
+  .hidden-command {
+    color: #ff69b4;
+  }
+  
+  /* Basic Styling */
+.projects-section {
+    max-width: 1200px;
+    margin: 0 auto;
+    color: var(--text-color);
+  }
+  
+  .file-explorer {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2rem;
+  }
+  
+  .file {
+    cursor: pointer;
+    margin: 5px 0;
+    padding: 10px;
+    background: var(--file-background);
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .file:hover {
+    background: var(--file-hover);
+  }
+  
+  .modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .modal-content {
+    width: 90%;
+    max-width: 800px;
+    background: var(--editor-background);
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .tabs {
+    display: flex;
+    border-bottom: 1px solid var(--border-color);
+  }
+  
+  .tab-button {
+    padding: 10px;
+    border: none;
+    background: none;
+    cursor: pointer;
+    color: var(--text-color);
+    border-right: 1px solid var(--border-color);
+  }
+  
+  .tab-button.active {
+    background: var(--active-tab);
+  }
+  
+  .tab-content .tab {
+    display: none;
+    padding: 10px;
+  }
+  
+  .tab-content .tab.active {
+    display: block;
+  }
+  
+  .code-snippet {
+    margin-top: 20px;
+    background: var(--snippet-background);
+    padding: 15px;
+    border-radius: 5px;
+    font-family: monospace;
+  }
+  
+  /* Light/Dark Mode Variables */
+  :root {
+    --background-color: #f0f0f0;
+    --text-color: #333;
+    --file-background: #e0e0e0;
+    --file-hover: #d0d0d0;
+    --editor-background: #ffffff;
+    --border-color: #ccc;
+    --active-tab: #ddd;
+    --snippet-background: #f5f5f5;
+  }
+  
+  body.dark-mode {
+    --background-color: #1e1e1e;
+    --text-color: #ddd;
+    --file-background: #2d2d2d;
+    --file-hover: #3d3d3d;
+    --editor-background: #252526;
+    --border-color: #444;
+    --active-tab: #333;
+    --snippet-background: #2b2b2b;
+  }
+  

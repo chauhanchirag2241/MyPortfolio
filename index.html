@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chauhan Chirag</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
+        integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"
+        integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- navbar section -->
+    <nav>
+        <ul>
+            <li class="nav-item"><a href="#home">Home</a></li>
+            <li class="nav-item"><a href="#about">About Me</a></li>
+            <li class="nav-item"><a href="#projects">Projects</a></li>
+            <li class="nav-item"><a href="">Skills</a></li>
+            <li class="nav-item"><a href="">Articles</a></li>
+            <li class="nav-item"><a href="">Achievements & Certifications</a></li>
+            <li class="nav-item"><a href="">Contact</a></li>
+            <li class="nav-item"><a href="">Resume</a></li>
+
+
+        </ul>
+    </nav>
+    <section id="home" class="home-section">
+        <div class="home-content">
+            <div class="home-text">
+                <h1 data-text="Hi, I'm Chauhan Chirag">Hi, I'm <span>Chauhan Chirag</span></h1>
+                <p>A passionate .NET and Angular developer with [X] years of experience in building innovative web
+                    applications.</p>
+                <a href="#projects" class="btn-primary">See My Work</a>
+            </div>
+            <div class="home-image">
+                <img src="images/man-1839500_1280.jpg" alt="Profile Picture">
+            </div>
+        </div>
+    </section>
+    <section id="about" class="about-section">
+        <div class="about-content">
+            <!-- Personal Story -->
+            <div class="about-text">
+                <div class="about-text">
+                    <h2>About Me</h2>
+                    <p>
+                        Hi, I’m [Your Name]. I started my tech journey with a B.Sc. in Computer Science from Saurashtra
+                        University, which sparked my passion for development. Shortly after, I joined Prompt Dairy Tech,
+                        where I gained valuable industry experience.
+                    </p>
+                    <p>
+                        While working, I pursued an MCA from Monark University, balancing my studies with professional
+                        growth. Now, with my MCA completed, I blend academic knowledge with practical experience in .NET
+                        and Angular development.
+                    </p>
+                    <p>
+                        I’m excited about leveraging my skills to build innovative solutions and connect with
+                        like-minded professionals. Thank you for visiting my portfolio!
+                    </p>
+                </div>
+
+                <!-- Visual Elements -->
+                <!-- <div class="about-image">
+                <img src="images/man-1839500_1280.jpg" alt="Profile Picture">
+            </div> -->
+
+                <!-- Interactive Timeline -->
+                <div class="about-timeline">
+                    <h2>Career Timeline</h2>
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <div class="timeline-content">
+                                <h3>Software Developer</h3>
+                                <h4><a target="_blank" href="https://www.promptdairytech.com/">Prompt Dairy Pvt. Ltd. -
+                                        Ahmedabad - Gujarat</a></h4>
+                                <p><strong>Role:</strong> Software Developer</p>
+                                <p><strong>Responsibilities:</strong> Research, development, code review, testing, and
+                                    deploying.</p>
+                                <p><strong>Duration:</strong> 15 Aug 2022 - Present</p>
+                            </div>
+                        </div>
+                        <!-- Add more timeline items here if needed -->
+                    </div>
+                </div>
+                <!-- Call to Action -->
+                <!-- <div class="about-cta">
+                <p>Want to connect or learn more about my work? Feel free to <a href="mailto:your-email@example.com">drop me a line</a> or connect with me on <a href="your-social-media-link" target="_blank">LinkedIn</a>.</p>
+            </div> -->
+            </div>
+    </section>
+    <section id="projects">
+        <div class="projects-section">
+            <h2>Projects</h2>
+            <div id="project-details" class="modal">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <span class="close" onclick="closeProject()">&times;</span>
+                        <div class="toggle-theme">
+                            <button id="dark-mode-toggle">🌙</button>
+                        </div>
+                    </div>
+                    <div class="tabs">
+                        <button class="tab-button active" onclick="openTab('overview')">Overview</button>
+                        <button class="tab-button" onclick="openTab('tech-stack')">Tech Stack</button>
+                        <button class="tab-button" onclick="openTab('challenges')">Challenges</button>
+                        <button class="tab-button" onclick="openTab('live-demo')">Live Demo</button>
+                    </div>
+                    <div class="tab-content">
+                        <div id="overview" class="tab active">
+                            <!-- Overview Content -->
+                        </div>
+                        <div id="tech-stack" class="tab">
+                            <!-- Tech Stack Content -->
+                        </div>
+                        <div id="challenges" class="tab">
+                            <!-- Challenges Content -->
+                        </div>
+                        <div id="live-demo" class="tab">
+                            <!-- Live Demo Content -->
+                        </div>
+                    </div>
+                    <div class="code-snippet">
+                        <pre><code class="language-js">
+            // Your Code Snippets Here
+            </code></pre>
+                    </div>
+                </div>
+            </div>
+            <div class="file-explorer">
+                <!-- Project File Icons with Creative Layout -->
+                <div class="folder" onclick="toggleFolder(this)">
+                    <i class="folder-icon">📂</i> My Projects
+                    <div class="folder-content">
+                        <div class="file" onclick="openProject('project1')" title="E-commerce Platform">
+                            <i class="file-icon">📝</i> E-commerce App
+                            <span class="tag completed">Completed</span>
+                        </div>
+                        <div class="file" onclick="openProject('project2')" title="Real-time Chat Application">
+                            <i class="file-icon">💬</i> Chat App
+                            <span class="tag in-progress">In Progress</span>
+                        </div>
+                        <div class="folder" onclick="toggleFolder(this)">
+                            <i class="folder-icon">📁</i> Web Tools
+                            <div class="folder-content">
+                                <div class="file" onclick="openProject('project3')" title="Portfolio Website">
+                                    <i class="file-icon">🌐</i> Portfolio Site
+                                    <span class="tag featured">Featured</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Project Details Modal -->
+
+
+
+        <div class="terminal-container">
+            <div class="terminal-header">
+                <span class="terminal-title">Terminal - Project Explorer</span>
+            </div>
+            <div class="terminal-body">
+                <div id="output" class="terminal-output">
+                    <p>Welcome to the Project Explorer! Type <span class="command">help</span> to see available
+                        commands.</p>
+                </div>
+                <div class="terminal-input">
+                    <span class="prompt">$</span>
+                    <input type="text" id="command-input" autocomplete="off" autofocus onkeydown="handleCommand(event)"
+                        placeholder="Type a command..." />
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Include GSAP via CDN -->
+
+    <script src="script.js"></script>
+</body>
+
+</html>
