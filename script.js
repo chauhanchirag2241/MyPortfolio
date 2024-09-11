@@ -121,3 +121,24 @@ function openProject(projectId) {
     document.body.classList.toggle('dark-mode');
   });
   
+
+
+  // //skil section
+  document.querySelectorAll('.skills-node').forEach(node => {
+    node.addEventListener('click', () => {
+        const skillName = node.getAttribute('data-skill');
+        const progress = node.querySelector('.progress-ring').getAttribute('data-progress');
+        // Update the skill details section
+        document.querySelector('.details-header').innerText = `Details for ${skillName}`;
+        document.querySelector('.details-content').innerHTML = `
+            <p>Proficiency Level: ${progress}%</p>
+            <!-- Additional details such as related projects or achievements can be added here -->
+        `;
+        // Update the progress ring
+        const circle = node.querySelector('.progress-ring-circle');
+        const radius = circle.r.baseVal.value;
+        const circumference = 2 * Math.PI * radius;
+        const offset = circumference - (progress / 100) * circumference;
+        circle.style.strokeDashoffset = offset;
+    });
+});
