@@ -142,3 +142,48 @@ function openProject(projectId) {
         circle.style.strokeDashoffset = offset;
     });
 });
+
+
+
+
+//certificates section
+
+
+    document.addEventListener('DOMContentLoaded', function () {
+        const items = document.querySelectorAll('.certification-item');
+        const overlay = document.createElement('div');
+        overlay.classList.add('zoom-overlay');
+        document.body.appendChild(overlay);
+
+        items.forEach(item => {
+            item.addEventListener('click', function () {
+                const imageSrc = this.querySelector('img').src;
+                const overlayImage = document.createElement('img');
+                overlayImage.src = imageSrc;
+                overlay.innerHTML = ''; // Clear previous content
+                overlay.appendChild(overlayImage);
+
+                // Toggle zoom
+                if (overlay.classList.contains('active')) {
+                    overlay.classList.remove('active');
+                } else {
+                    overlay.classList.add('active');
+                }
+            });
+        });
+
+        overlay.addEventListener('click', function () {
+            this.classList.remove('active');
+        });
+    });
+
+    function toggleZoom(element) {
+      const allItems = document.querySelectorAll('.certification-item');
+      allItems.forEach(item => {
+          if (item !== element) {
+              item.classList.remove('zoomed');
+          }
+      });
+      element.classList.toggle('zoomed');
+  }
+  
