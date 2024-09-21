@@ -11,7 +11,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"
         integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 
     <link rel="stylesheet" href="style.css">
 </head>
@@ -36,7 +36,7 @@
         <div class="home-content">
             <div class="home-text">
                 <h1 data-text="Hi, I'm Chauhan Chirag">Hi, I'm <span>Chauhan Chirag</span></h1>
-                <p>A passionate .NET and Angular developer with [X] years of experience in building innovative web
+                <p>A passionate .NET and Angular developer with 2 years of experience in building innovative web
                     applications.</p>
                 <a href="#projects" class="btn-primary">See My Work</a>
             </div>
@@ -44,33 +44,36 @@
                 <img src="images/man-1839500_1280.jpg" alt="Profile Picture">
             </div> -->
         </div>
- 
-    </section>
-           <!-- Side Panel for Connect Me -->
-<div class="connect-me-panel">
-    <a href="https://github.com/your-profile" target="_blank" class="social-icon">
-        <i class="fab fa-github"></i>
-    </a>
-    <a href="https://www.linkedin.com/in/your-profile" target="_blank" class="social-icon">
-        <i class="fab fa-linkedin"></i>
-    </a>
-    <a href="https://wa.me/your-phone-number" target="_blank" class="social-icon">
-        <i class="fab fa-whatsapp"></i>
-    </a>
-    <a href="mailto:your-email@example.com" class="social-icon">
-        <i class="fas fa-envelope"></i>
-    </a>
-    <!-- Add more social media icons as needed -->
-</div>
 
-<div class="about-content">
-    <section id="about" class="about-section">
-        <!-- Personal Story -->
-        <div class="about-text">
+    </section>
+    <!-- Side Panel for Connect Me -->
+    <div class="connect-me-panel">
+        <a href="https://github.com/chauhanchirag2241?tab=repositories" target="_blank" class="social-icon git-icon">
+            <i class="fab fa-github"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/chauhan-chirag-5a6945206/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+            target="_blank" class="social-icon linkdin-icon">
+            <i class="fab fa-linkedin"></i>
+        </a>
+        <a href="mailto:chauhan.chirag@outlook.com" class="social-icon email-icon">
+            <i class="fas fa-envelope"></i>
+        </a>
+        <a href="https://wa.me/+918200155458?text=Hi,Chirag" target="_blank" class="social-icon whatsapp-icon">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+
+        <!-- Add more social media icons as needed -->
+    </div>
+
+    <div class="about-content">
+        <section id="about" class="about-section">
+            <!-- Personal Story -->
+            <div class="about-text">
                 <h2>About Me</h2>
                 <div class="about-text">
                     <p>
-                        Hi, I’m [Your Name]. I started my tech journey with a B.Sc. in Computer Science from Saurashtra
+                        Hi, I’m Chauhan Chirag. I started my tech journey with a B.Sc. in Computer Science from
+                        Saurashtra
                         University, which sparked my passion for development. Shortly after, I joined Prompt Dairy Tech,
                         where I gained valuable industry experience.
                     </p>
@@ -113,268 +116,287 @@
                 <p>Want to connect or learn more about my work? Feel free to <a href="mailto:your-email@example.com">drop me a line</a> or connect with me on <a href="your-social-media-link" target="_blank">LinkedIn</a>.</p>
             </div> -->
             </div>
-    </section>
-    <section id="projects">
-        <div class="projects-section">
-            <h2>Projects</h2>
-            <div id="project-details" class="modal">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <span class="close" onclick="closeProject()">&times;</span>
-                        <div class="toggle-theme">
-                            <button id="dark-mode-toggle">🌙</button>
+        </section>
+        <section id="projects">
+            <div class="projects-section">
+                <h2>Projects</h2>
+                <div id="project-details" class="modal">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <span class="close" onclick="closeProject()"><img src="images/close.png"></span>
+                            <div class="toggle-theme">
+                                <!-- <button id="dark-mode-toggle">🌙</button> -->
+                            </div>
                         </div>
-                    </div>
-                    <div class="tabs">
-                        <button class="tab-button active" onclick="openTab('overview')">Overview</button>
-                        <button class="tab-button" onclick="openTab('tech-stack')">Tech Stack</button>
-                        <button class="tab-button" onclick="openTab('challenges')">Challenges</button>
-                        <button class="tab-button" onclick="openTab('live-demo')">Live Demo</button>
-                    </div>
-                    <div class="tab-content">
-                        <div id="overview" class="tab active">
-                            <!-- Overview Content -->
+                        <div class="tabs">
+                            <button class="tab-button active" onclick="openTab('overview')">Overview</button>
+                            <button class="tab-button" onclick="openTab('tech-stack')">Tech Stack</button>
+                            <button class="tab-button" onclick="openTab('challenges')">Challenges</button>
+                            <button class="tab-button" onclick="openTab('live-demo')">Live Demo</button>
                         </div>
-                        <div id="tech-stack" class="tab">
-                            <!-- Tech Stack Content -->
+                        <div class="tab-content">
+                            <div id="overview" class="tab active">
+                                <p></p>
+                            </div>
+                            <div id="tech-stack" class="tab">
+
+                            </div>
+                            <div id="challenges" class="tab">
+
+                            </div>
+                            <div id="live-demo" class="tab">
+                                <!-- Live Demo Content -->
+                            </div>
                         </div>
-                        <div id="challenges" class="tab">
-                            <!-- Challenges Content -->
-                        </div>
-                        <div id="live-demo" class="tab">
-                            <!-- Live Demo Content -->
-                        </div>
-                    </div>
-                    <div class="code-snippet">
+                        <!-- <div class="code-snippet">
                         <pre><code class="language-js">
-            // Your Code Snippets Here
+           <p> </p>
             </code></pre>
+                    </div> -->
                     </div>
                 </div>
-            </div>
-            <div class="file-explorer">
-                <!-- Project File Icons with Creative Layout -->
-                <div class="folder" onclick="toggleFolder(this)">
-                    <i class="folder-icon">📂</i> My Projects
-                    <div class="folder-content">
-                        <div class="file" onclick="openProject('project1')" title="E-commerce Platform">
-                            <i class="file-icon">📝</i> E-commerce App
-                            <span class="tag completed">Completed</span>
-                        </div>
-                        <div class="file" onclick="openProject('project2')" title="Real-time Chat Application">
-                            <i class="file-icon">💬</i> Chat App
-                            <span class="tag in-progress">In Progress</span>
-                        </div>
-                        <div class="folder" onclick="toggleFolder(this)">
-                            <i class="folder-icon">📁</i> Web Tools
-                            <div class="folder-content">
-                                <div class="file" onclick="openProject('project3')" title="Portfolio Website">
-                                    <i class="file-icon">🌐</i> Portfolio Site
-                                    <span class="tag featured">Featured</span>
+                <div class="file-explorer">
+                    <!-- Project File Icons with Creative Layout -->
+                    <div class="folder" onclick="toggleFolder(this)">
+                        <i class="folder-icon">📂</i> Projects
+                        <div class="folder-content">
+                            <div class="file" onclick="openProject('AMCS')" title="Amul (AMCS)">
+                                <i class="file-icon"><img src="images/project-management.png"></i> Amul (AMCS)
+                                <!-- <span class="tag completed">Completed</span> -->
+                            </div>
+                            <div class="file" onclick="openProject('PRP')" title="Routing Planning Application">
+                                <i class="file-icon"><img src="images/project-management.png"></i> Prompt Route Planner
+                                <!-- <span class="tag in-progress">In Progress</span> -->
+                            </div>
+                            <div class="file" onclick="openProject('RMRD')" title="RMRD Dashboard">
+                                <i class="file-icon"><img src="images/project-management.png"></i> RMRD Dashboard
+                                <!-- <span class="tag in-progress">In Progress</span> -->
+                            </div>
+                            <div class="file" onclick="openProject('Logistics')" title="Logistics">
+                                <i class="file-icon"><img src="images/project-management.png"></i> Logistics
+                                <!-- <span class="tag in-progress">In Progress</span> -->
+                            </div>
+                            <div class="folder" onclick="toggleFolder(this)">
+                                <i class="folder-icon">📁</i> My Projects
+                                <div class="folder-content">
+                                    <div class="file" title="Hospital Management System">
+                                        <i class="file-icon"><img src="images/project-management.png"></i> Hospital
+                                        Management System (MCA Project)
+                                        <!-- <span class="tag featured">Featured</span> -->
+                                        <span class="pdfBtn"><a target="_blank"
+                                                href="images/MU_MCA_SEM4_FINAL_REPORT_CHIRAG.pdf">View PDF</a></spanp>
+                                    </div>
+                                    <div class="file" title="Other Projects">
+                                        <i class="file-icon"><img src="images/project-management.png"></i> Other
+                                        Projects
+                                        <!-- <span class="tag in-progress">In Progress</span> -->
+                                        <span class="pdfBtn"><a target="_blank"
+                                                href="https://github.com/chauhanchirag2241?tab=repositories">View
+                                                ALL</a></spanp>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
 
-        <!-- Project Details Modal -->
-
-
-
-        <div class="terminal-container">
-            <div class="terminal-header">
-                <span class="terminal-title">Terminal - Project Explorer</span>
-            </div>
-            <div class="terminal-body">
-                <div id="output" class="terminal-output">
-                    <p>Welcome to the Project Explorer! Type <span class="command">help</span> to see available
-                        commands.</p>
-                </div>
-                <div class="terminal-input">
-                    <span class="prompt">$</span>
-                    <input type="text" id="command-input" autocomplete="off" autofocus onkeydown="handleCommand(event)"
-                        placeholder="Type a command..." />
-                </div>
-            </div>
-        </div>
-    </section>
+            <!-- Project Details Modal -->
 
 
 
-    <!-- <h1 class="skill-heading">Skills</h1> -->
-    <section id="skills-section">
-        <h2>Skill</h2>
-        <div class="skills-container">
-            <div class="skills-node" data-skill="C#">
-                <img src="images/c-sharp-c.svg" alt="C# Logo" class="skill-logo" />
-                <div class="skill-name">C#</div>
-                <div class="progress-ring" data-progress="80">
-                    <svg class="progress-ring-svg" width="100" height="100">
-                        <circle class="progress-ring-circle" stroke="#61dafb" stroke-width="4" fill="transparent" r="48"
-                            cx="50" cy="50" />
-                    </svg>
-                    <div class="progress-text"></div>
+            <div class="terminal-container">
+                <div class="terminal-header">
+                    <span class="terminal-title">Terminal - Project Explorer</span>
+                </div>
+                <div class="terminal-body">
+                    <div id="output" class="terminal-output">
+                        <p>Welcome to the Project Explorer! Type <span class="command">help</span> to see available
+                            commands.</p>
+                    </div>
+                    <div class="terminal-input">
+                        <span class="prompt">$</span>
+                        <input type="text" id="command-input" autocomplete="off" autofocus
+                            onkeydown="handleCommand(event)" placeholder="Type a command..." />
+                    </div>
                 </div>
             </div>
-            <div class="skills-node" data-skill="C#">
-                <img src="images/mvc-logo.png" alt="C# Logo" class="skill-logo" />
-                <div class="skill-name">MVC</div>
-                <div class="progress-ring" data-progress="80">
-                    <svg class="progress-ring-svg" width="100" height="100">
-                        <circle class="progress-ring-circle" stroke="#61dafb" stroke-width="4" fill="transparent" r="48"
-                            cx="50" cy="50" />
-                    </svg>
-                    <div class="progress-text"></div>
+        </section>
+
+
+
+        <!-- <h1 class="skill-heading">Skills</h1> -->
+        <section id="skills-section">
+            <h2>Skill</h2>
+            <div class="skills-container">
+                <div class="skills-node" data-skill="C#">
+                    <img src="images/c-sharp-c.svg" alt="C# Logo" class="skill-logo" />
+                    <div class="skill-name">C#</div>
+                    <div class="progress-ring" data-progress="80">
+                        <svg class="progress-ring-svg" width="100" height="100">
+                            <circle class="progress-ring-circle" stroke="#61dafb" stroke-width="4" fill="transparent"
+                                r="48" cx="50" cy="50" />
+                        </svg>
+                        <div class="progress-text"></div>
+                    </div>
                 </div>
-            </div>
-            <div class="skills-node" data-skill="ASP.NET Core">
-                <img src="images/NET core.svg" alt="ASP.NET Core Logo" class="skill-logo" />
-                <div class="skill-name">ASP.NET Core</div>
-                <div class="progress-ring" data-progress="75">
-                    <svg class="progress-ring-svg" width="100" height="100">
-                        <circle class="progress-ring-circle" stroke="#61dafb" stroke-width="4" fill="transparent" r="48"
-                            cx="50" cy="50" />
-                    </svg>
-                    <div class="progress-text"></div>
+                <div class="skills-node" data-skill="C#">
+                    <img src="images/mvc-logo.png" alt="C# Logo" class="skill-logo" />
+                    <div class="skill-name">MVC</div>
+                    <div class="progress-ring" data-progress="80">
+                        <svg class="progress-ring-svg" width="100" height="100">
+                            <circle class="progress-ring-circle" stroke="#61dafb" stroke-width="4" fill="transparent"
+                                r="48" cx="50" cy="50" />
+                        </svg>
+                        <div class="progress-text"></div>
+                    </div>
                 </div>
-            </div>
-            <div class="skills-node" data-skill="Angular">
-                <img src="images/AngularJS.svg" alt="Angular Logo" class="skill-logo" />
-                <div class="skill-name">AngularJS</div>
-                <div class="progress-ring" data-progress="85">
-                    <svg class="progress-ring-svg" width="100" height="100">
-                        <circle class="progress-ring-circle" stroke="#61dafb" stroke-width="4" fill="transparent" r="48"
-                            cx="50" cy="50" />
-                    </svg>
-                    <div class="progress-text"></div>
+                <div class="skills-node" data-skill="ASP.NET Core">
+                    <img src="images/NET core.svg" alt="ASP.NET Core Logo" class="skill-logo" />
+                    <div class="skill-name">ASP.NET Core</div>
+                    <div class="progress-ring" data-progress="75">
+                        <svg class="progress-ring-svg" width="100" height="100">
+                            <circle class="progress-ring-circle" stroke="#61dafb" stroke-width="4" fill="transparent"
+                                r="48" cx="50" cy="50" />
+                        </svg>
+                        <div class="progress-text"></div>
+                    </div>
                 </div>
-            </div>
-            <div class="skills-node" data-skill="Angular">
-                <img src="images/angular_gradient.png" alt="Angular Logo" class="skill-logo" />
-                <div class="skill-name">Angular</div>
-                <div class="progress-ring" data-progress="85">
-                    <svg class="progress-ring-svg" width="100" height="100">
-                        <circle class="progress-ring-circle" stroke="#61dafb" stroke-width="4" fill="transparent" r="48"
-                            cx="50" cy="50" />
-                    </svg>
-                    <div class="progress-text"></div>
+                <div class="skills-node" data-skill="Angular">
+                    <img src="images/AngularJS.svg" alt="Angular Logo" class="skill-logo" />
+                    <div class="skill-name">AngularJS</div>
+                    <div class="progress-ring" data-progress="85">
+                        <svg class="progress-ring-svg" width="100" height="100">
+                            <circle class="progress-ring-circle" stroke="#61dafb" stroke-width="4" fill="transparent"
+                                r="48" cx="50" cy="50" />
+                        </svg>
+                        <div class="progress-text"></div>
+                    </div>
                 </div>
-            </div>
-            <div class="skills-node" data-skill="Angular">
-                <img src="images/sql-server.png" alt="Angular Logo" class="skill-logo" />
-                <div class="skill-name">SQL</div>
-                <div class="progress-ring" data-progress="85">
-                    <svg class="progress-ring-svg" width="100" height="100">
-                        <circle class="progress-ring-circle" stroke="#61dafb" stroke-width="4" fill="transparent" r="48"
-                            cx="50" cy="50" />
-                    </svg>
-                    <div class="progress-text"></div>
+                <div class="skills-node" data-skill="Angular">
+                    <img src="images/angular_gradient.png" alt="Angular Logo" class="skill-logo" />
+                    <div class="skill-name">Angular</div>
+                    <div class="progress-ring" data-progress="85">
+                        <svg class="progress-ring-svg" width="100" height="100">
+                            <circle class="progress-ring-circle" stroke="#61dafb" stroke-width="4" fill="transparent"
+                                r="48" cx="50" cy="50" />
+                        </svg>
+                        <div class="progress-text"></div>
+                    </div>
                 </div>
-            </div>
-            <div class="skills-node" data-skill="Angular">
-                <img src="images/icons8-css-100.png" alt="Angular Logo" class="skill-logo" />
-                <div class="skill-name">CSS</div>
-                <div class="progress-ring" data-progress="85">
-                    <svg class="progress-ring-svg" width="100" height="100">
-                        <circle class="progress-ring-circle" stroke="#61dafb" stroke-width="4" fill="transparent" r="48"
-                            cx="50" cy="50" />
-                    </svg>
-                    <div class="progress-text"></div>
+                <div class="skills-node" data-skill="Angular">
+                    <img src="images/sql-server.png" alt="Angular Logo" class="skill-logo" />
+                    <div class="skill-name">SQL</div>
+                    <div class="progress-ring" data-progress="85">
+                        <svg class="progress-ring-svg" width="100" height="100">
+                            <circle class="progress-ring-circle" stroke="#61dafb" stroke-width="4" fill="transparent"
+                                r="48" cx="50" cy="50" />
+                        </svg>
+                        <div class="progress-text"></div>
+                    </div>
                 </div>
-            </div>
-            <div class="skills-node" data-skill="Angular">
-                <img src="images/icons8-git-48.png" alt="Angular Logo" class="skill-logo" />
-                <div class="skill-name">Git</div>
-                <div class="progress-ring" data-progress="85">
-                    <svg class="progress-ring-svg" width="100" height="100">
-                        <circle class="progress-ring-circle" stroke="#61dafb" stroke-width="4" fill="transparent" r="48"
-                            cx="50" cy="50" />
-                    </svg>
-                    <div class="progress-text"></div>
+                <div class="skills-node" data-skill="Angular">
+                    <img src="images/icons8-css-100.png" alt="Angular Logo" class="skill-logo" />
+                    <div class="skill-name">CSS</div>
+                    <div class="progress-ring" data-progress="85">
+                        <svg class="progress-ring-svg" width="100" height="100">
+                            <circle class="progress-ring-circle" stroke="#61dafb" stroke-width="4" fill="transparent"
+                                r="48" cx="50" cy="50" />
+                        </svg>
+                        <div class="progress-text"></div>
+                    </div>
                 </div>
-            </div>
-            <div class="skills-node" data-skill="Angular">
-                <img src="images/Microsoft_Azure-Logo.wine.svg" alt="Angular Logo" class="skill-logo" />
-                <div class="skill-name">Azure</div>
-                <div class="progress-ring" data-progress="85">
-                    <svg class="progress-ring-svg" width="100" height="100">
-                        <circle class="progress-ring-circle" stroke="#61dafb" stroke-width="4" fill="transparent" r="48"
-                            cx="50" cy="50" />
-                    </svg>
-                    <div class="progress-text"></div>
+                <div class="skills-node" data-skill="Angular">
+                    <img src="images/icons8-git-48.png" alt="Angular Logo" class="skill-logo" />
+                    <div class="skill-name">Git</div>
+                    <div class="progress-ring" data-progress="85">
+                        <svg class="progress-ring-svg" width="100" height="100">
+                            <circle class="progress-ring-circle" stroke="#61dafb" stroke-width="4" fill="transparent"
+                                r="48" cx="50" cy="50" />
+                        </svg>
+                        <div class="progress-text"></div>
+                    </div>
                 </div>
+                <div class="skills-node" data-skill="Angular">
+                    <img src="images/Microsoft_Azure-Logo.wine.svg" alt="Angular Logo" class="skill-logo" />
+                    <div class="skill-name">Azure</div>
+                    <div class="progress-ring" data-progress="85">
+                        <svg class="progress-ring-svg" width="100" height="100">
+                            <circle class="progress-ring-circle" stroke="#61dafb" stroke-width="4" fill="transparent"
+                                r="48" cx="50" cy="50" />
+                        </svg>
+                        <div class="progress-text"></div>
+                    </div>
+                </div>
+                <!-- Add more skills nodes here -->
             </div>
-            <!-- Add more skills nodes here -->
-        </div>
-        <!-- <div class="skill-details">
+            <!-- <div class="skill-details">
             <div class="details-header">Skill Details</div>
             <div class="details-content">
                 
             </div>
         </div> -->
-    </section>
+        </section>
 
-    <!-- Achievements and Certifications Section -->
-    <section id="achievements-section">
-        <div class="achievements-container">
-            <h2 class="section-title">Achievements & Certifications</h2>
-            <div class="certifications-list">
-                <div class="certification-item">
-                    <img src="images/azure certification.png" alt="Certification 1" class="certificate-image">
-                    <div class="certification-details">
-                        <h3 class="certification-title">Certification Title 1</h3>
-                        <p class="certification-description">Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                            Autem nulla eius alias corporis voluptate quod non architecto nostrum fugit deleniti.</p>
+        <!-- Achievements and Certifications Section -->
+        <section id="achievements-section">
+            <div class="achievements-container">
+                <h2 class="section-title">Achievements & Certifications</h2>
+                <div class="certifications-list">
+                    <div class="certification-item ">
+                        <img src="images/azure certification.png" alt="Certification 1" class="certificate-image">
+                        <div class="certification-details">
+                            <h3 class="certification-title">Microsoft Certified: Azure Fundamentals (AZ-900)</h3>
+                            <p class="certification-description">
+                                This certification demonstrates foundational knowledge of cloud services and how
+                                Microsoft Azure provides these services. It covers core Azure concepts, key solutions,
+                                management tools, pricing, and lifecycle.
+                            </p>
+                        </div>
                     </div>
-                </div>
-                <div class="certification-item">
-                    <img src="images/azure certification.png" alt="Certification 2" class="certificate-image">
-                    <div class="certification-details">
-                        <h3 class="certification-title">Certification Title 2</h3>
-                        <p class="certification-description">Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                            Quod necessitatibus ipsam pariatur magni repellat illo enim aspernatur tenetur corporis
-                            officiis!</p>
+                    <div class="certification-item">
+                        <img src="images/udamyAzure900.jpg" alt="Certification 2" class="certificate-image">
+                        <div class="certification-details">
+                            <h3 class="certification-title">Azure Fundamentals - Udamy</h3>
+                            <p class="certification-description">ccessfully completed the Microsoft Azure Fundamentals
+                                certification course through Udemy, gaining a solid foundation in cloud concepts, Azure
+                                services, security, and pricing. </p>
+                        </div>
                     </div>
-                </div>
-                <div class="certification-item">
-                    <img src="images/azure certification.png" alt="Certification 2" class="certificate-image">
-                    <div class="certification-details">
-                        <h3 class="certification-title">Certification Title 2</h3>
-                        <p class="certification-description">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                            Rem quis tempora inventore autem sequi minima obcaecati eligendi tenetur laudantium!
-                            Quibusdam?</p>
+
+                    <div class="certification-item">
+                        <img src="images/azure certification.png" alt="Certification 2" class="certificate-image">
+                        <div class="certification-details">
+                            <h3 class="certification-title">Above and Beyond the Duty (ABCD)</h3>
+                            <p class="certification-description">
+                                Issued By: Prompt Dairy Tech<br>
+                                Description: Recognized for exceptional dedication and going beyond the standard
+                                responsibilities. This certificate was awarded for consistently exceeding expectations
+                                and contributing significantly to the success of the projects and team goals at Prompt
+                                Dairy Tech.
+                            </p>
+                        </div>
                     </div>
+                    <!-- Add more certification items as needed -->
                 </div>
-                <div class="certification-item">
-                    <img src="images/azure certification.png" alt="Certification 2" class="certificate-image">
-                    <div class="certification-details">
-                        <h3 class="certification-title">Certification Title 2</h3>
-                        <p class="certification-description">Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                            Magnam minus amet ducimus unde velit ea magni, deleniti corporis quam in!</p>
-                    </div>
-                </div>
-                <!-- Add more certification items as needed -->
             </div>
-        </div>
-    </section>
+        </section>
 
-<!-- Resume Section -->
-<section id="resume-section">
-    <div class="resume-container">
-        <h2>Resume</h2>
-        <div class="resume-viewer">
-            <embed src="images/chirag-CV.pdf" type="application/pdf" width="100%" height="600px" />
-        </div>
-        <!-- <a href="images/chirag-CV.pdf" download="YourName_Resume.pdf" class="btn-download">Download Resume</a> -->
-    </div>
-</section>
+        <!-- Resume Section -->
+        <section id="resume-section">
+            <div class="resume-container">
+                <h2>Resume</h2>
+                <div class="resume-viewer">
+                    <embed src="images/chirag-CV.pdf" type="application/pdf" width="100%" height="600px" />
+                </div>
+                <!-- <a href="images/chirag-CV.pdf" download="YourName_Resume.pdf" class="btn-download">Download Resume</a> -->
+            </div>
+        </section>
 
 
-    <!-- Include GSAP via CDN -->
+        <!-- Include GSAP via CDN -->
 
-    <script src="script.js"></script>
+        <script src="script.js"></script>
 </body>
 
 </html>

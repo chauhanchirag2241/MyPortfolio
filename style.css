@@ -8,25 +8,33 @@
 /* Variables */
 :root {
     --normal-text-size: 1.5rem;
-    --primary-color: #1e1e1e; /* Dark color for text */
-    --background-color: #f5f5f5; /* Light gray background */
-    --accent-color: #61dafb; /* Accent color */
-    --hover-color: #282c34; /* Darker color for hover effect */
-    --text-shadow-color: rgba(0, 0, 0, 0.3); /* Subtle shadow to enhance text readability */
+    --primary-color: #1e1e1e;
+    /* Dark color for text */
+    --background-color: #f5f5f5;
+    /* Light gray background */
+    --accent-color: #61dafb;
+    /* Accent color */
+    --hover-color: #282c34;
+    /* Darker color for hover effect */
+    --text-shadow-color: rgba(0, 0, 0, 0.3);
+    /* Subtle shadow to enhance text readability */
 }
 
 /* Navbar Section */
 nav {
     height: 10vh;
-    background: linear-gradient(135deg, #333, #1e1e1e); /* Gradient for a modern look */
+    background: linear-gradient(135deg, #333, #1e1e1e);
+    /* Gradient for a modern look */
     display: flex;
     align-items: center;
     padding: 0 2rem;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adds depth with a stronger shadow */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    /* Adds depth with a stronger shadow */
     position: sticky;
     top: 0;
     z-index: 1000;
-    transition: background 0.3s ease-in-out; /* Smooth background transition */
+    transition: background 0.3s ease-in-out;
+    /* Smooth background transition */
 }
 
 /* Add subtle animation effect on hover */
@@ -43,7 +51,8 @@ ul {
 /* List Item Styles */
 nav ul li {
     list-style: none;
-    position: relative; /* For underline hover effect */
+    position: relative;
+    /* For underline hover effect */
 }
 
 /* Link Styles */
@@ -53,8 +62,10 @@ nav ul li a {
     text-decoration: none;
     color: var(--accent-color);
     padding: 0.5rem 1rem;
-    transition: color 0.3s ease, transform 0.3s ease, line-height 0.3s ease; /* Added line-height transition */
-    text-shadow: 0 1px 2px var(--text-shadow-color); /* Adds a subtle shadow to enhance readability */
+    transition: color 0.3s ease, transform 0.3s ease, line-height 0.3s ease;
+    /* Added line-height transition */
+    text-shadow: 0 1px 2px var(--text-shadow-color);
+    /* Adds a subtle shadow to enhance readability */
 }
 
 /* Unique Underline Hover Effect */
@@ -67,17 +78,21 @@ nav ul li a::after {
     transition: width 0.4s ease;
     position: absolute;
     left: 0;
-    bottom: -5px; /* Adjust to make it closer to the text */
+    bottom: -5px;
+    /* Adjust to make it closer to the text */
 }
 
 nav ul li a:hover {
     /* color: var(--hover-color); Darker color on hover */
-    transform: translateY(-2px); /* Slightly lifts the text on hover */
-    line-height: 1.5rem; /* Adjusted line-height on hover */
+    transform: translateY(-2px);
+    /* Slightly lifts the text on hover */
+    line-height: 1.5rem;
+    /* Adjusted line-height on hover */
 }
 
 nav ul li a:hover::after {
-    width: 100%; /* Expands underline fully on hover */
+    width: 100%;
+    /* Expands underline fully on hover */
 }
 
 /* Logo Styling (Optional) */
@@ -90,7 +105,8 @@ nav .logo {
 }
 
 nav .logo:hover {
-    transform: rotate(-5deg) scale(1.1); /* Subtle rotation and scaling for a playful effect */
+    transform: rotate(-5deg) scale(1.1);
+    /* Subtle rotation and scaling for a playful effect */
 }
 
 /* Responsive Design */
@@ -114,13 +130,14 @@ nav .logo:hover {
 }
 
 /* Home Section Styling */
-.home-section
- {
+.home-section {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 100vh; /* Full viewport height */
-    background: linear-gradient(135deg, #f5f5f5, #e0e0e0); /* Subtle gradient background */
+    height: 100vh;
+    /* Full viewport height */
+    background: linear-gradient(135deg, #f5f5f5, #e0e0e0);
+    /* Subtle gradient background */
     padding: 0 2rem;
 }
 
@@ -129,9 +146,11 @@ nav .logo:hover {
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    max-width: 1200px; /* Maximum width for the content */
+    max-width: 1200px;
+    /* Maximum width for the content */
     width: 100%;
-    gap: 2rem; /* Space between text and image */
+    gap: 2rem;
+    /* Space between text and image */
 }
 
 
@@ -149,7 +168,8 @@ nav .logo:hover {
     font-size: 1rem;
     font-weight: 600;
     color: #fff;
-    background-color:  #333; /* Blue button background */
+    background-color: #333;
+    /* Blue button background */
     padding: 0.75rem 1.5rem;
     border-radius: 5px;
     text-decoration: none;
@@ -157,7 +177,8 @@ nav .logo:hover {
 }
 
 .btn-primary:hover {
-    background-color: #0056b3; /* Darker blue on hover */
+    background-color: #0056b3;
+    /* Darker blue on hover */
 }
 
 .home-image {
@@ -170,9 +191,12 @@ nav .logo:hover {
 
 .home-image img {
     width: 100%;
-    max-width: 400px; /* Max width for profile image */
-    border-radius: 50%; /* Circular profile image */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+    max-width: 400px;
+    /* Max width for profile image */
+    border-radius: 50%;
+    /* Circular profile image */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    /* Shadow for depth */
 }
 
 
@@ -180,9 +204,11 @@ nav .logo:hover {
     font-size: 3rem;
     font-weight: 700;
     color: #333;
-    animation: text-glow 1.5s ease-in-out infinite; /* Animated glow effect */
+    animation: text-glow 1.5s ease-in-out infinite;
+    /* Animated glow effect */
     margin-bottom: 1rem;
 }
+
 .home-text h1 {
     font-size: 3rem;
     font-weight: 700;
@@ -196,24 +222,30 @@ nav .logo:hover {
     display: block;
     width: 0;
     height: 4px;
-    background: #007bff; /* Color of the underline */
-    transition: width 0.3s ease-in-out; /* Smooth transition effect */
+    background: #007bff;
+    /* Color of the underline */
+    transition: width 0.3s ease-in-out;
+    /* Smooth transition effect */
     position: absolute;
     left: 0;
     bottom: -5px;
 }
 
 .home-text h1:hover::after {
-    width: 100%; /* Expand underline on hover */
+    width: 100%;
+    /* Expand underline on hover */
 }
 
 
-.home-text h1 span{
+.home-text h1 span {
     font-size: 3rem;
     font-weight: 700;
-    background: #007bff; /* Gradient color */
-    -webkit-background-clip: text; /* Apply gradient to text */
-    -webkit-text-fill-color: transparent; /* Make the text color transparent */
+    background: #007bff;
+    /* Gradient color */
+    -webkit-background-clip: text;
+    /* Apply gradient to text */
+    -webkit-text-fill-color: transparent;
+    /* Make the text color transparent */
     margin-bottom: 1rem;
     position: relative;
 }
@@ -224,35 +256,59 @@ nav .logo:hover {
     top: 55%;
     left: 0;
     transform: translateY(-50%);
-    background-color: #333; /* Background color for the panel */
+    background-color: #333;
+    /* Background color for the panel */
     padding: 1rem 0.5rem;
     border-radius: 0 10px 10px 0;
-    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1); /* Shadow effect */
-    z-index: 999; /* Make sure it stays above other elements */
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+    /* Shadow effect */
+    z-index: 999;
+    /* Make sure it stays above other elements */
     display: flex;
     flex-direction: column;
     gap: 5rem;
 }
 
 .social-icon {
-    color: #fff; /* Icon color */
+    color: #fff;
+    /* Icon color */
     font-size: 1.5rem;
-    transition: color 0.3s, transform 0.3s; /* Smooth transition for hover effects */
+    transition: color 0.3s, transform 0.3s;
+    /* Smooth transition for hover effects */
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 .social-icon:hover {
-    color: #007bff; /* Change color on hover */
-    transform: scale(1.1); /* Slightly enlarge on hover */
+    /* color: #007bff; Change color on hover */
+    transform: scale(1.3);
+    /* Slightly enlarge on hover */
+}
+
+.git-icon:hover {
+    color: #F1502F;
+}
+
+.linkdin-icon:hover {
+    color: #0077B5;
+}
+
+.whatsapp-icon:hover {
+    color: #25D366;
+}
+
+.email-icon:hover {
+    color: #d3d3d3;
 }
 
 /* Mobile Responsiveness */
 @media (max-width: 768px) {
     .connect-me-panel {
-        top: 90%; /* Adjust position for mobile */
-        left: 10px; /* Slightly inwards for mobile screens */
+        top: 90%;
+        /* Adjust position for mobile */
+        left: 10px;
+        /* Slightly inwards for mobile screens */
         transform: translateY(-50%);
         flex-direction: row;
         padding: 0.5rem;
@@ -263,23 +319,17 @@ nav .logo:hover {
 
 /* About Section Styling */
 .about-section {
-    background-color: #f9f9f9; /* Light background for contrast */
-    padding: 4rem 2rem; /* Padding for spacing */
-}
-
-.about-content {
-    
-    max-width: 100vw;
-    margin: 2rem 2rem;
-}
-
-/* About Section Styling */
-.about-section {
     background-color: #f9f9f9;
+    /* Light background for contrast */
+    height: 100vh;
+    scroll-margin-top: 30px;
     padding: 4rem 2rem;
 }
 
-
+.about-content {
+    max-width: 100vw;
+    width: 100%;
+}
 
 /* Text and Image Layout */
 .about-text {
@@ -289,7 +339,9 @@ nav .logo:hover {
 
 .about-text h2,
 .projects-section h2,
-#skills-section h2{
+#skills-section h2 ,
+.section-title,
+.resume-container h2{
     font-size: 2.5rem;
     font-weight: 700;
     color: #333;
@@ -339,6 +391,7 @@ nav .logo:hover {
 .about-cta a:hover {
     text-decoration: underline;
 }
+
 /* Career Timeline Styling */
 .career-timeline {
     background-color: #f9f9f9;
@@ -445,13 +498,20 @@ nav .logo:hover {
 
 
 /* Terminal Container */
-#projects{
-    height: 100vh;  
-    background-color:  #f9f9f9;
+#projects {
+    /* height: 100vh;   */
+    background-color: #f9f9f9;
+    scroll-margin-top: 30px;
+    padding: 4rem 2rem;
 }
+
+#projects-section {
+    max-width: 1200px;
+    width: 100%;
+}
+
 .terminal-container {
-    width: 90%;
-    
+    width: 100%;
     max-width: 800px;
     margin: 0 auto;
     background: #1e1e1e;
@@ -460,11 +520,31 @@ nav .logo:hover {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
     font-family: 'Courier New', Courier, monospace;
     overflow: hidden;
-   
-  }
-  
-  /* Terminal Header */
-  .terminal-header {
+    overflow-y: auto;
+}
+
+.close {
+    margin-left: auto;
+}
+
+.close img {
+    width: 1rem;
+    height: 1rem;
+
+}
+
+.close img:hover {
+    cursor: pointer;
+}
+
+.file-icon img {
+    width: 2rem;
+    margin-right: 1rem;
+    /* height: 1.5rem; */
+}
+
+/* Terminal Header */
+.terminal-header {
     background: #333;
     padding: 10px;
     color: #f8f8f2;
@@ -472,70 +552,66 @@ nav .logo:hover {
     justify-content: center;
     align-items: center;
     border-bottom: 1px solid #444;
-  }
-  
-  .terminal-title {
+}
+
+.terminal-title {
     font-weight: bold;
-  }
-  
-  /* Terminal Body */
-  .terminal-body {
+}
+
+/* Terminal Body */
+.terminal-body {
     padding: 15px;
     height: 400px;
     overflow-y: auto;
-  }
-  
-  /* Terminal Output */
-  .terminal-output {
+}
+
+/* Terminal Output */
+.terminal-output {
     margin-bottom: 10px;
-  }
-  
-  .command {
+}
+
+.command {
     color: #00ff00;
-  }
-  
-  /* Terminal Input */
-  .terminal-input {
+}
+
+/* Terminal Input */
+.terminal-input {
     display: flex;
     align-items: center;
-  }
-  
-  .prompt {
+}
+
+.prompt {
     margin-right: 5px;
     color: #00ff00;
-  }
-  
-  #command-input {
+}
+
+#command-input {
     background: none;
     border: none;
     color: #c5c5c5;
     outline: none;
     width: 100%;
-  }
-  
-  #command-input::placeholder {
+}
+
+#command-input::placeholder {
     color: #555;
-  }
-  
-  /* Easter Egg Command Highlight */
-  .hidden-command {
+}
+
+/* Easter Egg Command Highlight */
+.hidden-command {
     color: #ff69b4;
-  }
-  
-  /* Basic Styling */
-.projects-section {
-    max-width: 1200px;
-    margin: 0 auto;
-    color: var(--text-color);
-  }
-  
-  .file-explorer {
+}
+
+/* Basic Styling */
+
+
+.file-explorer {
     display: flex;
     flex-direction: column;
     margin-bottom: 2rem;
-  }
-  
-  .file {
+}
+
+.file {
     cursor: pointer;
     margin: 5px 0;
     padding: 10px;
@@ -543,13 +619,27 @@ nav .logo:hover {
     border-radius: 5px;
     display: flex;
     align-items: center;
-  }
-  
-  .file:hover {
+}
+
+.file:hover {
     background: var(--file-hover);
-  }
-  
-  .modal {
+}
+
+.pdfBtn {
+    margin-left: auto;
+    border: 1px solid black;
+    padding: 0.5rem;
+    border-radius: 10px;
+    background-color: white;
+
+}
+
+.pdfBtn a {
+    text-decoration: none;
+    color: black;
+}
+
+.modal {
     display: none;
     position: fixed;
     top: 0;
@@ -559,61 +649,76 @@ nav .logo:hover {
     background: rgba(0, 0, 0, 0.8);
     justify-content: center;
     align-items: center;
-  }
-  
-  .modal-content {
+}
+
+.modal-content {
     width: 90%;
-    max-width: 800px;
+    max-width: 900px;
+    height: 65%;
     background: var(--editor-background);
     padding: 20px;
     border-radius: 10px;
     display: flex;
     flex-direction: column;
-  }
-  
-  .modal-header {
+}
+
+.tab p {
+    font-size: 1rem;
+    font-family: 'circular';
+    line-height: 2;
+
+}
+
+.modal-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-  }
-  
-  .tabs {
+}
+
+.tabs {
     display: flex;
     border-bottom: 1px solid var(--border-color);
-  }
-  
-  .tab-button {
+}
+
+.tab-button {
     padding: 10px;
     border: none;
     background: none;
     cursor: pointer;
     color: var(--text-color);
     border-right: 1px solid var(--border-color);
-  }
-  
-  .tab-button.active {
+}
+
+.tab-button.active {
     background: var(--active-tab);
-  }
-  
-  .tab-content .tab {
+}
+
+.tab-content {
+    overflow-y: auto;
+    /* Use 'auto' instead of 'scroll' */
+}
+
+
+.tab-content .tab {
     display: none;
     padding: 10px;
-  }
-  
-  .tab-content .tab.active {
+
+}
+
+.tab-content .tab.active {
     display: block;
-  }
-  
-  .code-snippet {
+}
+
+.code-snippet {
     margin-top: 20px;
     background: var(--snippet-background);
     padding: 15px;
     border-radius: 5px;
     font-family: monospace;
-  }
-  
-  /* Light/Dark Mode Variables */
-  :root {
+}
+
+/* Light/Dark Mode Variables */
+:root {
     --background-color: #f0f0f0;
     --text-color: #333;
     --file-background: #e0e0e0;
@@ -622,9 +727,9 @@ nav .logo:hover {
     --border-color: #ccc;
     --active-tab: #ddd;
     --snippet-background: #f5f5f5;
-  }
-  
-  body.dark-mode {
+}
+
+body.dark-mode {
     --background-color: #1e1e1e;
     --text-color: #ddd;
     --file-background: #2d2d2d;
@@ -633,16 +738,19 @@ nav .logo:hover {
     --border-color: #444;
     --active-tab: #333;
     --snippet-background: #2b2b2b;
-  }
-  
+}
 
-  /* skills section */
- /* Skills Section Styling */
+
+/* skills section */
+/* Skills Section Styling */
 #skills-section {
     display: flex;
     justify-content: space-between;
     padding: 4rem 2rem;
     background-color: #f9f9f9;
+    height: 100vh;
+    scroll-margin-top: 30px;
+
 }
 
 .skills-container {
@@ -695,7 +803,8 @@ nav .logo:hover {
 }
 
 .progress-ring-circle {
-    stroke-dasharray: 301.6; /* Circumference of the circle */
+    stroke-dasharray: 301.6;
+    /* Circumference of the circle */
     stroke-dashoffset: 0;
     transition: stroke-dashoffset 0.3s;
 }
@@ -733,32 +842,30 @@ nav .logo:hover {
 
 /* Achievements and Certifications Section */
 #achievements-section {
-    background-color: #f5f5f5; /* Light background for contrast */
+    background-color: #f5f5f5;
+    /* Light background for contrast */
     padding: 4rem 2rem;
+    min-height: 100vh;
+    scroll-margin-top: 30px;
 }
 
 .achievements-container {
-    max-width: 1200px;
+    /* min-width: 1200px; */
     margin: 0 auto;
 }
 
-.section-title {
-    font-size: 2.5rem;
-    font-weight: 700;
-    color: #333;
-    text-align: center;
-    margin-bottom: 2rem;
-}
+
 
 .certifications-list {
     display: flex;
     flex-wrap: wrap;
     gap: 2rem;
-    justify-content: center;
+    justify-content: left;
+    padding-top: 2rem;
 }
 
 .certification-item {
-    background-color:  #fffcfc;
+    background-color: #fffcfc;
     /* background-color: #0056b3; */
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -786,11 +893,13 @@ nav .logo:hover {
     width: 50%;
     height: auto;
     border-bottom: 2px solid #007bff;
-    transition: transform 0.3s ease; /* Smooth zoom effect */
+    transition: transform 0.3s ease;
+    /* Smooth zoom effect */
 }
 
 .certification-item:hover .certificate-image {
-    transform: scale(1.1); /* Zoom effect */
+    transform: scale(1.1);
+    /* Zoom effect */
 }
 
 .certification-details {
@@ -807,6 +916,7 @@ nav .logo:hover {
 .certification-description {
     font-size: 1rem;
     color: #666;
+    text-align: justify;
 }
 
 /* Responsive Design */
@@ -838,7 +948,8 @@ nav .logo:hover {
 .zoom-overlay img {
     max-width: 90%;
     max-height: 90%;
-    transform: scale(1); /* No initial zoom */
+    transform: scale(1);
+    /* No initial zoom */
     transition: transform 0.3s ease;
 }
 
@@ -849,7 +960,8 @@ nav .logo:hover {
 
 /* Hide overlay on click */
 .zoom-overlay img {
-    pointer-events: none; /* Prevent clicks on the image itself */
+    pointer-events: none;
+    /* Prevent clicks on the image itself */
 }
 
 /* Certification Details */
@@ -873,17 +985,19 @@ nav .logo:hover {
 #resume-section {
     background-color: #f9f9f9;
     padding: 2rem 2rem;
-    
+    scroll-margin-top: 40px;
+    height: 100vh;
 }
 
 .resume-container {
-    max-width: 1200px;
+    /* max-width: 1200px; */
     margin: 0 auto;
-    text-align: center;
+    /* text-align: center; */
 }
 
 .resume-viewer {
     margin-bottom: 1rem;
+  
 }
 
 .resume-viewer embed {
@@ -896,7 +1010,8 @@ nav .logo:hover {
     font-size: 1rem;
     font-weight: 600;
     color: #fff;
-    background-color: #007bff; /* Blue button background */
+    background-color: #007bff;
+    /* Blue button background */
     padding: 0.75rem 1.5rem;
     border-radius: 5px;
     text-decoration: none;
@@ -904,12 +1019,7 @@ nav .logo:hover {
 }
 
 .btn-download:hover {
-    background-color: #0056b3; /* Darker blue on hover */
+    background-color: #0056b3;
+    /* Darker blue on hover */
 }
 
-.resume-container h2{
-    font-size: 2.5rem;
-    font-weight: 700;
-    color: #333;
-    margin-bottom: 1rem;
-}
