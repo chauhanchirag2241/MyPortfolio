@@ -1,15 +1,60 @@
 // Sample Project Data
 const projects = {
-  "Amul (AMCS)": {
-    overview: "An e-commerce platform with a modern UI and robust backend.",
-    techStack: "React, Node.js, Express, MongoDB",
-    demo: "https://ecommerce-app.demo",
+  "AMCS": {
+    overview: `<p> - The Amul Automatic Milk Collection System streamlines the daily operations of dairy
+         farmers by automating the process of milk collection, integrating advanced hardware
+         like Data Processing Units (DPU) to ensure accurate measurements and seamless data
+         handling.</p><br><p>-  This system also supports mobile applications for on-site milk collection,
+         ensuring real-time data capture and improving overall efficiency.</p><br><h3>Key Features:</h3><br>
+     <P>(1) Daily Milk Collection: Automates and records milk collection from dairy farmers using integrated hardware systems (DPU).
+     </P><p>(2)  Mobile Application: Facilitates on-the-go milk collection with real-time data synchronization between mobile devices and the server.
+     </p> <p>(3)  Hardware Integration: Connects with DPUs to ensure precise measurement and automatic data logging, minimizing human error.
+     </p> <p> (4)  Logistics Management: Tracks and manages the transportation and distribution of milk from collection points to processing units.
+     </p> <p> (5) Accounting & Payment: Provides a comprehensive system for managing payments to farmers, loans, and other financial transactions.
+     </p> <p>(6)  Reporting System: Generates detailed reports on daily milk collection, farmer payments, and logistical operations to provide insights and facilitate
+         decision-making.</p>`,
+
+    techStack: `<br><p>* Backend: .NET MVC </p><br><p>* Frontend: AngularJS</p><br><p>* Database: Sql Server , Pg Sql</p>
+                                <br><p>* Hardware: Data Processing Unit (DPU) Integration , Milk Analyzer ,Tankassure </p></p>`,
+    demo: "Data Not Found",
+
     hidden: false,
   },
-  "chat-app": {
-    overview: "A real-time chat application with user authentication.",
-    techStack: "Angular, Firebase",
-    demo: "https://chat-app.demo",
+  "PRP": {
+    overview: `<p>- The Route Planning Application is designed to optimize the collection of milk from various locations, ensuring efficient logistics for dairy operations.</p>
+    <br><p>this application addresses key challenges in milk collection by leveraging advanced algorithms and real-time data analysis.</p>
+    <br><h3>Key Features:</h3><br><p>(1) Dynamic Route Planning : Users can input a starting point for milk collection, allowing for customized route generation based on specific needs.</p>
+    <br><p>(2) Vehicle Constraints : The application takes into account vehicle capacity and type, ensuring that the planned routes are suitable for the available resources.</p>
+    <br><p>(3) Road Analysis : Provides detailed analysis of the chosen routes, including estimated duration, travel time, and distance, helping users make informed decisions.</p>
+    <br><p>(4) Map Integration: An intuitive map view enables users to visualize routes, making it easier to understand the logistics and optimize collection strategies.</p>
+    <br><p>(5) User-Friendly Interface : Designed with Angular 17, the UI is responsive and easy to navigate, enhancing the user experience during route planning.</p>
+    `,
+    techStack: `<br><p>* Backend: .NET 6 , .NET 8 </p><br><p>* Frontend: Angular 17</p><br><p>* Database: Sql Server</p> `,
+    demo: "Data Not Found",
+    hidden: false,
+  },
+  "RMRD": {
+    overview: `<p>The RMRD Dashboard provides a comprehensive, real-time overview of daily milk collection operations, streamlining data analysis for dairy industry professionals.</p>
+    <br><p> This dashboard allows users to filter data based on various parameters such as:</p>
+    <br><p>(1) Society-wise Milk Collection: View and analyze milk collected from different societies across regions.</p>
+    <br><p>(2) Farmer Participation: Track how many farmers contributed to daily milk collection.</p>
+    <br><p>(1) Plant-specific Data: Monitor the amount of milk delivered to different plants in real-time.</p>
+    `,
+    techStack: `<br><p>* Backend: .NET 8 </p><br><p>* Frontend: Angular 17</p><br><p>* Database: Sql Server</p> `,
+    demo: "No Data Found",
+    hidden: false,
+  },
+  "Logistics": {
+    overview: `<p>- This project is designed to efficiently manage milk logistics, ensuring timely transportation within a few hours of milk collection.
+It includes the integration of multiple vehicle types, managing vehicle capacities, and monitoring logistics from milk collection points to various societies.
+ A key feature of this system is the inclusion of a mobile application for drivers, which ensures secure transport and real-time updates on logistics.</p>
+ <br><h3>Key Features:</h3><br><p>(1) Vehicle Management: Add and track various vehicle types and capacities for optimized logistics planning.</p>
+ <br><p>(2) Logistics Coordination: Manage routes and logistics from plants to societies, ensuring timely and efficient milk delivery.</p>
+ <br><p>(3) Mobile Application for Drivers: A mobile app provides real-time updates to drivers, helping them navigate routes securely and complete their logistics tasks efficiently.</p>
+ <br><p>(4) Secure Transport: The system ensures safe and secure transportation of milk, providing transparency throughout the process.</p>
+ `,
+    techStack: `<br><p>* Backend: .NET 7 </p><br><p>* Frontend: Angular 15</p><br><p>* Database: Sql Server</p> `,
+    demo: "No Data Found",
     hidden: false,
   },
   "secret-project": {
@@ -32,8 +77,8 @@ const commands = {
     if (projects[projectName]) {
       return `
   <b>${projectName}</b>
-  Overview: ${projects[projectName].overview}
-  Tech Stack: ${projects[projectName].techStack}
+  <strong>Overview<strong>: ${projects[projectName].overview}
+  <br><strong>Tech Stack<strong>: ${projects[projectName].techStack}
   Type <span class="command">demo</span> to view the live demo.
   `;
     } else {
@@ -153,10 +198,10 @@ function openProject(projectId) {
       <br><p>(3) Mobile Application for Drivers: A mobile app provides real-time updates to drivers, helping them navigate routes securely and complete their logistics tasks efficiently.</p>
       <br><p>(4) Secure Transport: The system ensures safe and secure transportation of milk, providing transparency throughout the process.</p>
       `;
-      tech_stack.innerHTML = `<br><p>* Backend: .NET 7 </p><br><p>* Frontend: Angular 15</p><br><p>* Database: Sql Server</p> `;
-      challenges.innerHTML = `<br><p>We faced the critical challenge of ensuring the logistics are completed within the limited lifespan of milk</p>`;
+    tech_stack.innerHTML = `<br><p>* Backend: .NET 7 </p><br><p>* Frontend: Angular 15</p><br><p>* Database: Sql Server</p> `;
+    challenges.innerHTML = `<br><p>We faced the critical challenge of ensuring the logistics are completed within the limited lifespan of milk</p>`;
   }
-  else{
+  else {
     overview.innerHTML = '<P>No Data Found!</p>'
     tech_stack.innerHTML = '<P>No Data Found!</p>'
     challenges.innerHTML = '<P>No Data Found!</p>'

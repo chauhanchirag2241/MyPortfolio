@@ -6,40 +6,56 @@
 }
 
 /* Variables */
-:root {
-    --normal-text-size: 1.5rem;
-    --primary-color: #1e1e1e;
-    /* Dark color for text */
-    --background-color: #f5f5f5;
-    /* Light gray background */
+
+ :root{
+    --primary_Color :#15c5f5 ;
+    --background_Color_All: #f9f9f9;
+    --background-color_home:linear-gradient(135deg, #f5f5f5, #e0e0e0);
     --accent-color: #61dafb;
-    /* Accent color */
-    --hover-color: #282c34;
-    /* Darker color for hover effect */
-    --text-shadow-color: rgba(0, 0, 0, 0.3);
-    /* Subtle shadow to enhance text readability */
+    --text_Color: #000 ;
+    --text-size: ;
+    --Primary-font: ;
+    --secondary-font: ;    
+    --navnar_background :  linear-gradient(135deg, #333, #1e1e1e);
+    --navbar_background_hover :linear-gradient(135deg, #1e1e1e, #333);
+    --button_background_color:#000;
+    --button_text_Color:#fff;
+    --button_backgroundColor_hover:#5c6370;
+    --hover_line_color:var(--primary_Color);
+    
+    
+    
+    --file-background: #e0e0e0;
+    --file-hover: #d0d0d0;
+    --editor-background: #ffffff;
+    --border-color: #ccc;
+    --active-tab: #ddd;
+    --snippet-background: #f5f5f5;
+
+    --skill_node_background:#fff;
+} 
+
+body{
+    color: var(--text_Color);
 }
 
 /* Navbar Section */
 nav {
     height: 10vh;
-    background: linear-gradient(135deg, #333, #1e1e1e);
-    /* Gradient for a modern look */
+    background: var(--navnar_background);  
     display: flex;
     align-items: center;
     padding: 0 2rem;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    /* Adds depth with a stronger shadow */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);   
     position: sticky;
     top: 0;
     z-index: 1000;
-    transition: background 0.3s ease-in-out;
-    /* Smooth background transition */
+    transition: background 0.3s ease-in-out;   
 }
 
 /* Add subtle animation effect on hover */
 nav:hover {
-    background: linear-gradient(135deg, #1e1e1e, #333);
+    background: var(--navbar_background_hover);
 }
 
 ul {
@@ -57,10 +73,10 @@ nav ul li {
 
 /* Link Styles */
 nav ul li a {
-    font-size: var(--normal-text-size);
+    font-size: 1.5rem;
     font-weight: 600;
     text-decoration: none;
-    color: var(--accent-color);
+    color: var(--primary_Color);
     padding: 0.5rem 1rem;
     transition: color 0.3s ease, transform 0.3s ease, line-height 0.3s ease;
     /* Added line-height transition */
@@ -73,7 +89,7 @@ nav ul li a::after {
     content: "";
     display: block;
     height: 3px;
-    background: var(--accent-color);
+    background: var(--hover_line_color);
     width: 0;
     transition: width 0.4s ease;
     position: absolute;
@@ -84,10 +100,8 @@ nav ul li a::after {
 
 nav ul li a:hover {
     /* color: var(--hover-color); Darker color on hover */
-    transform: translateY(-2px);
-    /* Slightly lifts the text on hover */
-    line-height: 1.5rem;
-    /* Adjusted line-height on hover */
+    transform: translateY(-2px);   
+    line-height: 1.5rem;   
 }
 
 nav ul li a:hover::after {
@@ -96,7 +110,7 @@ nav ul li a:hover::after {
 }
 
 /* Logo Styling (Optional) */
-nav .logo {
+/* nav .logo {
     font-size: 2rem;
     font-weight: 800;
     color: var(--accent-color);
@@ -106,38 +120,17 @@ nav .logo {
 
 nav .logo:hover {
     transform: rotate(-5deg) scale(1.1);
-    /* Subtle rotation and scaling for a playful effect */
-}
+   
+} */
 
-/* Responsive Design */
-@media (max-width: 768px) {
-    nav {
-        padding: 0 1rem;
-    }
-
-    ul {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    nav ul li {
-        margin-bottom: 1rem;
-    }
-
-    nav ul li a {
-        padding: 1rem;
-    }
-}
 
 /* Home Section Styling */
 .home-section {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 100vh;
-    /* Full viewport height */
-    background: linear-gradient(135deg, #f5f5f5, #e0e0e0);
-    /* Subtle gradient background */
+    height: 100vh;   
+    background: var(--background-color_home);   
     padding: 0 2rem;
 }
 
@@ -146,20 +139,13 @@ nav .logo:hover {
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    max-width: 1200px;
-    /* Maximum width for the content */
+    max-width: 1200px;  
     width: 100%;
-    gap: 2rem;
-    /* Space between text and image */
+    gap: 2rem;  
 }
 
-
-
-
-
 .home-text p {
-    font-size: 1.2rem;
-    color: #666;
+    font-size: 1.2rem;   
     margin-bottom: 2rem;
 }
 
@@ -167,8 +153,8 @@ nav .logo:hover {
     display: inline-block;
     font-size: 1rem;
     font-weight: 600;
-    color: #fff;
-    background-color: #333;
+    color:var(--button_text_Color);
+    background-color:var(--button_background_color);
     /* Blue button background */
     padding: 0.75rem 1.5rem;
     border-radius: 5px;
@@ -177,7 +163,7 @@ nav .logo:hover {
 }
 
 .btn-primary:hover {
-    background-color: #0056b3;
+    background-color:var(--button_backgroundColor_hover);
     /* Darker blue on hover */
 }
 
@@ -204,15 +190,6 @@ nav .logo:hover {
     font-size: 3rem;
     font-weight: 700;
     color: #333;
-    animation: text-glow 1.5s ease-in-out infinite;
-    /* Animated glow effect */
-    margin-bottom: 1rem;
-}
-
-.home-text h1 {
-    font-size: 3rem;
-    font-weight: 700;
-    color: #333;
     position: relative;
     margin-bottom: 1rem;
 }
@@ -222,7 +199,8 @@ nav .logo:hover {
     display: block;
     width: 0;
     height: 4px;
-    background: #007bff;
+    background: var(--hover_line_color);
+    /* background: #007bff; */
     /* Color of the underline */
     transition: width 0.3s ease-in-out;
     /* Smooth transition effect */
@@ -240,7 +218,7 @@ nav .logo:hover {
 .home-text h1 span {
     font-size: 3rem;
     font-weight: 700;
-    background: #007bff;
+    background:var(--primary_Color);
     /* Gradient color */
     -webkit-background-clip: text;
     /* Apply gradient to text */
@@ -256,7 +234,7 @@ nav .logo:hover {
     top: 55%;
     left: 0;
     transform: translateY(-50%);
-    background-color: #333;
+    background-color: var(--button_background_color);
     /* Background color for the panel */
     padding: 1rem 0.5rem;
     border-radius: 0 10px 10px 0;
@@ -270,7 +248,7 @@ nav .logo:hover {
 }
 
 .social-icon {
-    color: #fff;
+    color: var(--primary_Color);
     /* Icon color */
     font-size: 1.5rem;
     transition: color 0.3s, transform 0.3s;
@@ -280,10 +258,8 @@ nav .logo:hover {
     align-items: center;
 }
 
-.social-icon:hover {
-    /* color: #007bff; Change color on hover */
+.social-icon:hover {   
     transform: scale(1.3);
-    /* Slightly enlarge on hover */
 }
 
 .git-icon:hover {
@@ -302,25 +278,9 @@ nav .logo:hover {
     color: #d3d3d3;
 }
 
-/* Mobile Responsiveness */
-@media (max-width: 768px) {
-    .connect-me-panel {
-        top: 90%;
-        /* Adjust position for mobile */
-        left: 10px;
-        /* Slightly inwards for mobile screens */
-        transform: translateY(-50%);
-        flex-direction: row;
-        padding: 0.5rem;
-        border-radius: 10px;
-    }
-}
-
-
 /* About Section Styling */
 .about-section {
-    background-color: #f9f9f9;
-    /* Light background for contrast */
+    background-color:var(--background_Color_All);    
     height: 100vh;
     scroll-margin-top: 30px;
     padding: 4rem 2rem;
@@ -343,18 +303,16 @@ nav .logo:hover {
 .section-title,
 .resume-container h2{
     font-size: 2.5rem;
-    font-weight: 700;
-    color: #333;
+    font-weight: 700;    
     margin-bottom: 1rem;
 }
 
 .about-text p {
     font-size: 1.1rem;
-    color: #666;
     line-height: 1.6;
     margin-bottom: 1rem;
 }
-
+/* 
 .about-image {
     flex: 1;
     max-width: 30%;
@@ -369,7 +327,7 @@ nav .logo:hover {
     border-radius: 50%;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     border: 2px solid #007bff;
-}
+} */
 
 /* Call to Action */
 .about-cta {
@@ -378,8 +336,7 @@ nav .logo:hover {
 }
 
 .about-cta p {
-    font-size: 1.2rem;
-    color: #333;
+    font-size: 1.2rem;    
 }
 
 .about-cta a {
@@ -394,19 +351,13 @@ nav .logo:hover {
 
 /* Career Timeline Styling */
 .career-timeline {
-    background-color: #f9f9f9;
+    /* background-color: #f9f9f9; */
     padding: 4rem 2rem;
     max-width: 1200px;
     margin: 0 auto;
 }
 
-.career-timeline h2 {
-    font-size: 2.5rem;
-    font-weight: 700;
-    color: #333;
-    text-align: center;
-    margin-bottom: 2rem;
-}
+
 
 /* .timeline {
     position: relative;
@@ -440,20 +391,17 @@ nav .logo:hover {
 }
 
 .timeline-content h3 {
-    font-size: 1.5rem;
-    color: #333;
+    font-size: 1.5rem;    
     margin-bottom: 0.5rem;
 }
 
 .timeline-content h4 {
-    font-size: 1.2rem;
-    color: #666;
+    font-size: 1.2rem;    
     margin-bottom: 1rem;
 }
 
 .timeline-content p {
-    font-size: 1rem;
-    color: #333;
+    font-size: 1rem;    
     margin-bottom: 0.5rem;
 }
 
@@ -461,46 +409,11 @@ nav .logo:hover {
     color: #007bff;
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-    .timeline {
-        padding: 0;
-    }
-
-    .timeline-content {
-        width: 100%;
-        margin-left: 0;
-        transform: none;
-    }
-
-    .timeline::before {
-        display: none;
-    }
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    .about-content {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .about-text,
-    .about-image {
-        max-width: 100%;
-        text-align: center;
-    }
-
-    .about-image {
-        margin-top: 2rem;
-    }
-}
-
 
 /* Terminal Container */
 #projects {
     /* height: 100vh;   */
-    background-color: #f9f9f9;
+    background-color: var(--background_Color_All);
     scroll-margin-top: 30px;
     padding: 4rem 2rem;
 }
@@ -512,10 +425,10 @@ nav .logo:hover {
 
 .terminal-container {
     width: 100%;
-    max-width: 800px;
+    max-width: 80vw;    
     margin: 0 auto;
-    background: #1e1e1e;
-    color: #c5c5c5;
+    background: #000;
+    color: #fff;
     border-radius: 8px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
     font-family: 'Courier New', Courier, monospace;
@@ -626,17 +539,17 @@ nav .logo:hover {
 }
 
 .pdfBtn {
-    margin-left: auto;
-    border: 1px solid black;
+    margin-left: auto;    
     padding: 0.5rem;
     border-radius: 10px;
-    background-color: white;
+    background-color:var(--button_background_color);
+    
 
 }
 
 .pdfBtn a {
     text-decoration: none;
-    color: black;
+    color: var(--button_text_Color);
 }
 
 .modal {
@@ -694,8 +607,7 @@ nav .logo:hover {
 }
 
 .tab-content {
-    overflow-y: auto;
-    /* Use 'auto' instead of 'scroll' */
+    overflow-y: auto;    
 }
 
 
@@ -717,37 +629,13 @@ nav .logo:hover {
     font-family: monospace;
 }
 
-/* Light/Dark Mode Variables */
-:root {
-    --background-color: #f0f0f0;
-    --text-color: #333;
-    --file-background: #e0e0e0;
-    --file-hover: #d0d0d0;
-    --editor-background: #ffffff;
-    --border-color: #ccc;
-    --active-tab: #ddd;
-    --snippet-background: #f5f5f5;
-}
-
-body.dark-mode {
-    --background-color: #1e1e1e;
-    --text-color: #ddd;
-    --file-background: #2d2d2d;
-    --file-hover: #3d3d3d;
-    --editor-background: #252526;
-    --border-color: #444;
-    --active-tab: #333;
-    --snippet-background: #2b2b2b;
-}
-
-
 /* skills section */
 /* Skills Section Styling */
 #skills-section {
     display: flex;
     justify-content: space-between;
     padding: 4rem 2rem;
-    background-color: #f9f9f9;
+    background-color:var(--background_Color_All);
     height: 100vh;
     scroll-margin-top: 30px;
 
@@ -769,7 +657,7 @@ body.dark-mode {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background: #fff;
+    background: var(--skill_node_background);
     border-radius: 12px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s ease;
@@ -782,14 +670,13 @@ body.dark-mode {
 
 .skill-logo {
     width: 60px;
-    height: 60px;
+    min-height: 60px;
     margin-bottom: 1rem;
 }
 
 .skill-name {
     font-size: 1.2rem;
-    font-weight: 600;
-    color: #333;
+    font-weight: 600;    
 }
 
 .progress-ring {
@@ -807,6 +694,7 @@ body.dark-mode {
     /* Circumference of the circle */
     stroke-dashoffset: 0;
     transition: stroke-dashoffset 0.3s;
+    
 }
 
 .progress-text {
@@ -815,12 +703,11 @@ body.dark-mode {
     left: 50%;
     transform: translate(-50%, -50%);
     font-size: 1.2rem;
-    font-weight: 600;
-    color: #333;
+    font-weight: 600;    
 }
 
 /* Skill Details Styling */
-.skill-details {
+/* .skill-details {
     flex: 2;
     padding: 2rem;
     background-color: #fff;
@@ -838,11 +725,11 @@ body.dark-mode {
 .details-content {
     font-size: 1rem;
     color: #666;
-}
+} */
 
 /* Achievements and Certifications Section */
 #achievements-section {
-    background-color: #f5f5f5;
+    background-color:var(--background_Color_All);
     /* Light background for contrast */
     padding: 4rem 2rem;
     min-height: 100vh;
@@ -865,7 +752,7 @@ body.dark-mode {
 }
 
 .certification-item {
-    background-color: #fffcfc;
+    background-color: var(--skill_node_background);
     /* background-color: #0056b3; */
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -892,7 +779,7 @@ body.dark-mode {
     /* width: 100%; */
     width: 50%;
     height: auto;
-    border-bottom: 2px solid #007bff;
+    margin-top: 1rem;
     transition: transform 0.3s ease;
     /* Smooth zoom effect */
 }
@@ -909,26 +796,13 @@ body.dark-mode {
 .certification-title {
     font-size: 1.5rem;
     font-weight: 700;
-    color: #333;
     margin-bottom: 0.5rem;
 }
 
 .certification-description {
-    font-size: 1rem;
-    color: #666;
+    font-size: 1rem;    
     text-align: justify;
 }
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    .certifications-list {
-        flex-direction: column;
-        align-items: center;
-    }
-}
-
-
-
 
 /* Full-screen overlay */
 .zoom-overlay {
@@ -964,26 +838,9 @@ body.dark-mode {
     /* Prevent clicks on the image itself */
 }
 
-/* Certification Details */
-.certification-details {
-    padding: 1.5rem;
-}
-
-.certification-title {
-    font-size: 1.5rem;
-    font-weight: 700;
-    color: #333;
-    margin-bottom: 0.5rem;
-}
-
-.certification-description {
-    font-size: 1rem;
-    color: #666;
-}
-
 /* Resume Section Styling */
 #resume-section {
-    background-color: #f9f9f9;
+    background-color:var(--background_Color_All);
     padding: 2rem 2rem;
     scroll-margin-top: 40px;
     height: 100vh;
@@ -1005,21 +862,5 @@ body.dark-mode {
     border-radius: 8px;
 }
 
-.btn-download {
-    display: inline-block;
-    font-size: 1rem;
-    font-weight: 600;
-    color: #fff;
-    background-color: #007bff;
-    /* Blue button background */
-    padding: 0.75rem 1.5rem;
-    border-radius: 5px;
-    text-decoration: none;
-    transition: background-color 0.3s ease;
-}
 
-.btn-download:hover {
-    background-color: #0056b3;
-    /* Darker blue on hover */
-}
 
