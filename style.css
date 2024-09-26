@@ -1,3 +1,135 @@
+ /* <uniquifier>: Use a unique and descriptive class name
+ <weight>: Use a value from 300 to 800 */
+
+.open-sans {
+  font-family: "Open Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight:300;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+}
+
+
+.poppins-thin {
+    font-family: "Poppins", sans-serif;
+    font-weight: 100;
+    font-style: normal;
+  }
+  
+  .poppins-extralight {
+    font-family: "Poppins", sans-serif;
+    font-weight: 200;
+    font-style: normal;
+  }
+  
+  .poppins-light {
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+  }
+  
+  .poppins-regular {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  .poppins-medium {
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+  }
+  
+  .poppins-semibold {
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+  }
+  
+  .poppins-bold {
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+  }
+  
+  .poppins-extrabold {
+    font-family: "Poppins", sans-serif;
+    font-weight: 800;
+    font-style: normal;
+  }
+  
+  .poppins-black {
+    font-family: "Poppins", sans-serif;
+    font-weight: 900;
+    font-style: normal;
+  }
+  
+  .poppins-thin-italic {
+    font-family: "Poppins", sans-serif;
+    font-weight: 100;
+    font-style: italic;
+  }
+  
+  .poppins-extralight-italic {
+    font-family: "Poppins", sans-serif;
+    font-weight: 200;
+    font-style: italic;
+  }
+  
+  .poppins-light-italic {
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+    font-style: italic;
+  }
+  
+  .poppins-regular-italic {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: italic;
+  }
+  
+  .poppins-medium-italic {
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-style: italic;
+  }
+  
+  .poppins-semibold-italic {
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-style: italic;
+  }
+  
+  .poppins-bold-italic {
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    font-style: italic;
+  }
+  
+  .poppins-extrabold-italic {
+    font-family: "Poppins", sans-serif;
+    font-weight: 800;
+    font-style: italic;
+  }
+  
+  .poppins-black-italic {
+    font-family: "Poppins", sans-serif;
+    font-weight: 900;
+    font-style: italic;
+  }
+  
+
+
+  body {
+    margin: 0;
+    height: 200vh; /* Increase height for scrolling */
+}
+canvas {
+    display: block; /* Ensure canvas fills the screen */
+}
+
+
 /* CSS Reset */
 * {
     margin: 0;
@@ -8,9 +140,9 @@
 /* Variables */
 
  :root{
-    --primary_Color :#15c5f5 ;
-    --background_Color_All: #f9f9f9;
-    --background-color_home:linear-gradient(135deg, #f5f5f5, #e0e0e0);
+    --primary_Color :#000 ;
+    --background_Color_All:#ffffff;
+    --background-color_home:#ffffff;
     --accent-color: #61dafb;
     --text_Color: #000 ;
     --text-size: ;
@@ -42,21 +174,24 @@ body{
 /* Navbar Section */
 nav {
     height: 10vh;
-    background: var(--navnar_background);  
+    width: 100vw;
+    background: white;  
     display: flex;
     align-items: center;
     padding: 0 2rem;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);   
-    position: sticky;
+    position: fixed;
     top: 0;
     z-index: 1000;
     transition: background 0.3s ease-in-out;   
 }
-
-/* Add subtle animation effect on hover */
-nav:hover {
-    background: var(--navbar_background_hover);
+nav ul li a img{
+    display: none;
 }
+/* Add subtle animation effect on hover */
+/* nav:hover {
+    background: var(--navbar_background_hover);
+} */
 
 ul {
     display: flex;
@@ -73,7 +208,7 @@ nav ul li {
 
 /* Link Styles */
 nav ul li a {
-    font-size: 1.5rem;
+    font-size: 1rem;
     font-weight: 600;
     text-decoration: none;
     color: var(--primary_Color);
@@ -129,28 +264,32 @@ nav .logo:hover {
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
+    gap: 5rem;
     height: 100vh;   
     background: var(--background-color_home);   
-    padding: 0 2rem;
+    padding: 0 5rem;
+    align-items: center;
 }
 
 .home-content {
     display: flex;
     flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    max-width: 1200px;  
-    width: 100%;
-    gap: 2rem;  
+   
+    justify-content: space-between;   
+    
 }
 
 .home-text p {
     font-size: 1.2rem;   
     margin-bottom: 2rem;
+    font-family: o;
+    
 }
 
 .btn-primary {
     display: inline-block;
+    
     font-size: 1rem;
     font-weight: 600;
     color:var(--button_text_Color);
@@ -160,6 +299,8 @@ nav .logo:hover {
     border-radius: 5px;
     text-decoration: none;
     transition: background-color 0.3s ease;
+    width: 200px;
+    text-align: center;
 }
 
 .btn-primary:hover {
@@ -185,13 +326,18 @@ nav .logo:hover {
     /* Shadow for depth */
 }
 
-
+.home-text{
+    display:flex;
+    flex-direction: column;
+    
+}
 .home-text h1 {
     font-size: 3rem;
     font-weight: 700;
     color: #333;
     position: relative;
     margin-bottom: 1rem;
+
 }
 
 .home-text h1::after {
@@ -230,27 +376,28 @@ nav .logo:hover {
 
 /* Connect Me Side Panel Styling */
 .connect-me-panel {
-    position: absolute;
-    top: 55%;
-    left: 0;
-    transform: translateY(-50%);
-    background-color: var(--button_background_color);
+   
+    /* background-color:white; */
     /* Background color for the panel */
-    padding: 1rem 0.5rem;
-    border-radius: 0 10px 10px 0;
-    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+    /* padding: 1rem 0.5rem; */
+    /* border-radius: 0 10px 10px 0; */
+    /* box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1); */
     /* Shadow effect */
     z-index: 999;
     /* Make sure it stays above other elements */
     display: flex;
-    flex-direction: column;
-    gap: 5rem;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 2rem;
+    width: 50vw;
+    justify-content: space-between;
+    /* background-color: #000; */
 }
 
 .social-icon {
     color: var(--primary_Color);
     /* Icon color */
-    font-size: 1.5rem;
+    font-size: 2.5rem;
     transition: color 0.3s, transform 0.3s;
     /* Smooth transition for hover effects */
     display: flex;
@@ -275,7 +422,7 @@ nav .logo:hover {
 }
 
 .email-icon:hover {
-    color: #d3d3d3;
+    color: #ff5d5d;
 }
 
 /* About Section Styling */
@@ -352,39 +499,22 @@ nav .logo:hover {
 /* Career Timeline Styling */
 .career-timeline {
     /* background-color: #f9f9f9; */
-    padding: 4rem 2rem;
-    max-width: 1200px;
+    padding: 4rem 2rem;   
     margin: 0 auto;
 }
 
 
-
-/* .timeline {
-    position: relative;
-    padding: 1rem 0;
-}
-
-.timeline::before {
-    content: "";
-    position: absolute;
-    left: 50%;
-    height: 100%;
-    border-left: 2px solid #007bff;
-    top: 0;
-    transform: translateX(-50%);
-} */
-
 .timeline-item {
-    position: relative;
+    
     margin: 1rem 0;
 }
 
 .timeline-content {
     background-color: #fff;
-    border: 2px solid #007bff;
+    border: 2px solid #000;
     border-radius: 8px;
     padding: 1.5rem;
-    position: relative;
+    
     width: 45%;
     margin-left: 22%;
     transform: translateX(-50%);
@@ -542,9 +672,8 @@ nav .logo:hover {
     margin-left: auto;    
     padding: 0.5rem;
     border-radius: 10px;
-    background-color:var(--button_background_color);
-    
-
+    background-color:var(--button_background_color);    
+    font-size: 0.6rem;
 }
 
 .pdfBtn a {
@@ -577,7 +706,7 @@ nav .logo:hover {
 
 .tab p {
     font-size: 1rem;
-    font-family: 'circular';
+    /* font-family: 'circular'; */
     line-height: 2;
 
 }
@@ -765,8 +894,7 @@ nav .logo:hover {
     height: 25rem; */
 
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    width: 22rem;
-    height: 25rem;
+    width: 22rem;   
 
 }
 
@@ -863,4 +991,33 @@ nav .logo:hover {
 }
 
 
+
+/* Card-like Styling for Sections */
+section {
+    background-color: var(--background_Color_All); /* Background color for sections */
+    border: 1px solid var(--border-color); /* Border around sections */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+    padding: 2rem; /* Padding inside sections */
+    margin: 2rem 1rem; /* Margin between sections */
+    overflow-y: auto;
+}
+
+/* Optional: Specific styling for the main sections like home, about, etc. */
+.home-section,
+.about-section,
+#projects,
+.career-timeline,
+.connect-me-panel {
+    /* Additional specific styles can go here if needed */
+    transition: transform 0.3s ease; /* Smooth transition on hover */
+}
+
+/* Hover Effect */
+section:hover {
+    transform: translateY(-2px); /* Lift effect on hover */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); /* Enhanced shadow on hover */
+}
+
+/* Navbar Styling (optional) for consistency */
 

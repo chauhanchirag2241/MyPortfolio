@@ -1,33 +1,17 @@
 @media (max-width: 768px) {
     /* navbar */
-    nav {
-        padding: 0 1rem;
-    }
-
-    ul {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    nav ul li {
-        margin-bottom: 1rem;
-    }
-
-    nav ul li a {
-        padding: 1rem;
-    }
-
 
     /* connect me panel */
     .connect-me-panel {
-        top: 90%;       
-        left: 10px;
-        /* Slightly inwards for mobile screens */
-        transform: translateY(-50%);
-        flex-direction: row;
-        padding: 0.5rem;
-        border-radius: 10px;
+
+        width: 35vw;
+
     }
+
+    body {
+        background-color: red;
+    }
+
 
     /* about section */
     .about-content {
@@ -44,6 +28,7 @@
     .about-image {
         margin-top: 2rem;
     }
+
     /* careear time line */
     .timeline {
         padding: 0;
@@ -66,3 +51,135 @@
     }
 }
 
+/* Media query for small screens */
+@media (max-width: 768px) {
+
+    /* Stack about text and timeline vertically */
+    nav ul li a img {
+        display: block;
+        width: 2.5rem;
+        height: 2.5rem;
+    }
+
+    .home-text p {
+        margin-bottom: 0;
+    }
+
+    nav ul li a span {
+        display: none;
+    }
+
+    .home-section {
+        scroll-margin-top: 60px;
+        padding: 0px 7px;
+
+    }
+
+    .home-text h1 {
+
+        padding-top: 3rem;
+    }
+
+    .about-text h2,
+    .projects-section h2,
+    #skills-section h2,
+    .section-title,
+    .resume-container h2 {
+        font-size: 1.7rem;
+        font-weight: 700;
+        margin-bottom: 0.7rem;
+    }
+
+    .home-text h1 span {
+        font-size: 2rem;
+
+    }
+
+    .about-section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 2rem 1rem;
+    }
+
+    .about-text {
+        max-width: 100%;
+        padding: 1rem;
+    }
+
+    .about-timeline {
+        width: 100%;
+        margin-top: 2rem;
+        padding: 1rem;
+    }
+
+    .timeline-content {
+        width: 90%;
+        margin-left: 5%;
+    }
+
+    /* Project section should come below the timeline */
+    #projects {
+        /* margin-top: 3rem;  */
+        /* Add space between sections */
+
+    }
+
+    .file-explorer {
+        display: block;
+        width: 100%;
+    }
+
+    /* Adjust project section layout for small screens */
+    .folder-content {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .folder,
+    .file {
+        width: 100%;
+    }
+
+    .file-icon img {
+        width: 1.5rem;
+        margin-right: 0.5rem;
+    }
+
+    .modal-content {
+        width: 100%;
+        padding: 1rem;
+    }
+
+    .tabs {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .tab-content {
+        padding: 1rem;
+    }
+
+    .skills-node {
+        width: 110px;
+        height: 110px;
+    }
+
+    .skill-logo {
+        width: 40px;
+        min-height: 40px;
+    }
+
+    .progress-ring {
+        display: none;
+    }
+
+    .skill-name {
+        text-align: center;
+    }
+
+    .certification-item {
+        width: unset;
+    }
+}

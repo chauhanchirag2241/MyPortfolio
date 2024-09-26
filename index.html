@@ -13,58 +13,73 @@
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+        rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style2.css">
     <link rel="stylesheet" href="responsive.css">
 </head>
 
-<body>
+<body class="poppins-light">
     <!-- navbar section -->
-    <nav>
+   
+    <nav class="poppins-light " >
         <ul>
-            <li class="nav-item"><a href="#home">Home</a></li>
-            <li class="nav-item"><a href="#about">About Me</a></li>
-            <li class="nav-item"><a href="#projects">Projects</a></li>
-            <li class="nav-item"><a href="#skills-section">Skills</a></li>
-            <li class="nav-item"><a href="#achievements-section">Achievements & Certifications</a></li>
+            <li class="nav-item"><a href="#home"><img src="images//home (2).png"></i><span>Home</span></a></li>
+            <li class="nav-item"><a href="#about"><img src="images//working.png"></i><span>About Me</span></a></li>
+            <li class="nav-item"><a href="#projects"><img src="images//projecticon.png"></i><span>Projects</span></a></li>
+            <li class="nav-item"><a href="#skills-section"><img src="images//skill.png"></i><span>Skills</span></a></li>
+            <li class="nav-item"><a href="#achievements-section"><img src="images//certificate.png"></i><span>Achievements & Certifications</span></a></li>
             <!-- <li class="nav-item"><a href="">Articles</a></li>
             <li class="nav-item"><a href="">Contact</a></li> -->
-            <li class="nav-item"><a href="#resume-section">Resume</a></li>
-
-
+            <li class="nav-item"><a href="#resume-section"><img src="images//cv.png"></i><span>Resume</span></a></li>
         </ul>
     </nav>
+
+    
     <section id="home" class="home-section">
         <div class="home-content">
-            <div class="home-text">
-                <h1 >Hi, I'm <span>Chauhan Chirag</span></h1>
+            <div class="home-text ">
+                <h1><span>Hi, I'm Chauhan Chirag</span></h1>
                 <p>A passionate .NET and Angular developer with 2 years of experience in building innovative web
                     applications.</p>
-                <a href="#projects" class="btn-primary">See My Work</a>
+                </div>
+                <!-- <div class="home-image">
+                    <img src="images/man-1839500_1280.jpg" alt="Profile Picture">
+                </div> -->
             </div>
-            <!-- <div class="home-image">
-                <img src="images/man-1839500_1280.jpg" alt="Profile Picture">
-            </div> -->
+            <div class="connect-me-panel">
+                <a href="https://github.com/chauhanchirag2241?tab=repositories" target="_blank" class="social-icon git-icon">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/chauhan-chirag-5a6945206/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+                target="_blank" class="social-icon linkdin-icon">
+                <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="mailto:chauhan.chirag@outlook.com" class="social-icon email-icon">
+                <i class="fas fa-envelope"></i>
+            </a>
+            <a href="https://wa.me/+918200155458?text=Hi,Chirag" target="_blank" class="social-icon whatsapp-icon">
+                <i class="fab fa-whatsapp"></i>
+            </a>
+            
+            <!-- Add more social media icons as needed -->
         </div>
-
+        <a href="#projects" class="btn-primary">See My Work</a>
     </section>
     <!-- Side Panel for Connect Me -->
-    <div class="connect-me-panel">
-        <a href="https://github.com/chauhanchirag2241?tab=repositories" target="_blank" class="social-icon git-icon">
-            <i class="fab fa-github"></i>
-        </a>
-        <a href="https://www.linkedin.com/in/chauhan-chirag-5a6945206/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
-            target="_blank" class="social-icon linkdin-icon">
-            <i class="fab fa-linkedin"></i>
-        </a>
-        <a href="mailto:chauhan.chirag@outlook.com" class="social-icon email-icon">
-            <i class="fas fa-envelope"></i>
-        </a>
-        <a href="https://wa.me/+918200155458?text=Hi,Chirag" target="_blank" class="social-icon whatsapp-icon">
-            <i class="fab fa-whatsapp"></i>
-        </a>
-
-        <!-- Add more social media icons as needed -->
-    </div>
+   
 
     <div class="about-content">
         <section id="about" class="about-section">
@@ -96,12 +111,12 @@
 
                 <!-- Interactive Timeline -->
                 <div class="about-timeline">
-                    <h2>Career Timeline</h2>
+                    <h3>Career Timeline</h3>
                     <div class="timeline">
                         <div class="timeline-item">
                             <div class="timeline-content">
                                 <h3>Software Developer</h3>
-                                <h4><a target="_blank" href="https://www.promptdairytech.com/">Prompt Dairy Pvt. Ltd. -
+                                <h4><a >Prompt Dairy Pvt. Ltd. -
                                         Ahmedabad - Gujarat</a></h4>
                                 <p><strong>Role:</strong> Software Developer</p>
                                 <p><strong>Responsibilities:</strong> Research, development, code review, testing, and
@@ -228,9 +243,9 @@
 
         <!-- <h1 class="skill-heading">Skills</h1> -->
         <section id="skills-section">
-            <h2>Skill</h2>
             <div class="skills-container">
-                <div class="skills-node" data-skill="C#">
+                <!-- <h2>Skill</h2> -->
+                <div class="skills-node"  data-skill="C#">
                     <img src="images/c-sharp-c.svg" alt="C# Logo" class="skill-logo" />
                     <div class="skill-name">C#</div>
                     <div class="progress-ring" data-progress="80">

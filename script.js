@@ -1,4 +1,8 @@
 // Sample Project Data
+window.onload = function() {
+  document.getElementById('home').scrollIntoView({ behavior: 'smooth' });
+};
+
 const projects = {
   "AMCS": {
     overview: `<p> - The Amul Automatic Milk Collection System streamlines the daily operations of dairy
@@ -295,3 +299,8 @@ function toggleZoom(element) {
   });
   element.classList.toggle('zoomed');
 }
+
+
+
+
+
