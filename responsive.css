@@ -204,4 +204,7 @@
     .certification-item {
         width: unset;
     }
+    .modal{
+        top: -7rem;
+    }
 }
