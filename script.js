@@ -61,6 +61,82 @@ It includes the integration of multiple vehicle types, managing vehicle capaciti
     demo: "No Data Found",
     hidden: false,
   },
+   "Warehouse": {
+    overview: ` <p>
+  This project focuses on real-time monitoring and management of warehouse conditions by synchronizing data from company-installed IoT devices.
+  It continuously tracks critical parameters such as warehouse temperature, door status, battery percentage, and power supply status (mains on/off).
+  </p>
+  <br>
+  <p>
+  Based on these parameters, the system generates alerts for responsible personnel. If an issue is not resolved within a defined time period,
+  alerts are automatically escalated to higher authorities, ensuring proactive issue resolution and operational safety.
+  </p>
+  <h3>Key Features:</h3>
+  <br>
+  <p>(1) Real-Time Device Data Sync: Seamless synchronization of warehouse device data including temperature, door open/close status, battery health, and power supply status.</p>
+  <br>
+  <p>(2) Alert & Escalation System: Configurable alert levels with automatic escalation if issues are not resolved within the specified SLA time.</p>
+  <br>
+  <p>(3) Interactive Monitoring Dashboard: A visually rich dashboard to monitor warehouse temperature trends, device health, and active alerts in real time.</p>
+  <br>
+  <p>(4) Warehouse Performance Insights: Identification of top-performing and critical warehouses based on temperature stability and alert frequency.</p>
+  <br>
+  <p>(5) Multi-Database Support: Efficient handling of device and alert data across multiple databases.</p>
+
+  `,
+    techStack: `
+    <p><strong>Backend API:</strong> .NET 8</p>
+  <p><strong>Background Services:</strong> .NET 8 Worker Service (Device Data Sync & Alert Processing)</p>
+  <p><strong>Frontend:</strong> Angular 9</p>
+  <p><strong>Databases:</strong> SQL Server, PostgreSQL, MongoDB</p>
+  <p><strong>Caching:</strong> Redis</p>
+    `,
+    demo: "No Data Found",
+    hidden: false,
+  },
+  "SecureLock": {
+  overview: `
+  <p>
+  This project enhances milk transportation security by integrating a digital secure lock system on vehicles,
+  ensuring milk quality and purity from the collection center to the plant without any compromise during transit.
+  </p>
+  <br>
+  <p>
+  The system combines secure lock hardware, GPS tracking, and geofencing to ensure that vehicle access is strictly
+  controlled and monitored throughout the journey.
+  </p>
+  `,
+  
+  keyFeatures: `
+  <h3>Key Features:</h3>
+  <br>
+  <p>(1) Digital Secure Lock System: Vehicles are equipped with smart digital locks that can be opened only by authorized personnel using biometric authentication (fingerprint) or a secure hardware key.</p>
+  <br>
+  <p>(2) Location-Based Lock Control: The secure lock can be unlocked only when the vehicle reaches the authorized plant location or predefined geofenced areas.</p>
+  <br>
+  <p>(3) GPS-Based Route Tracking: Real-time GPS tracking of vehicles ensures continuous monitoring of vehicle movement during milk transportation.</p>
+  <br>
+  <p>(4) Route Deviation & Unauthorized Stop Alerts: Automatic alerts are generated if a vehicle deviates from the assigned route or stops at an unauthorized location instead of defined stoppages.</p>
+  <br>
+  <p>(5) Real-Time Alerts & Notifications: Immediate alerts are sent to responsible authorities in case of security breaches, route diversion, or lock tampering.</p>
+  <br>
+  <p>(6) Vehicle Breakdown & Failure Handling: The system supports reporting and monitoring of vehicle breakdowns or failures to ensure quick response and minimal disruption.</p>
+  <br>
+  <p>(7) Mobile Application for Conductors: A dedicated mobile app allows conductors to view assigned routes, live vehicle location, stoppages, and alerts in real time.</p>
+  `,
+  
+  techStack: `
+  <p><strong>Frontend:</strong> Angular 17</p>
+  <p><strong>Backend API:</strong> .NET 8</p>
+  <p><strong>Background Services:</strong> .NET 8 Worker Service (GPS Tracking, Lock Events, Alerts)</p>
+  <p><strong>Databases:</strong> SQL Server, MongoDB</p>
+  <p><strong>Devices & Hardware:</strong> Secure Lock Device, Secure Hardware Key, GPS Device</p>
+  <p><strong>Mobile Application:</strong> Android (Conductor App)</p>
+  `,
+  
+  demo: "No Data Found",
+  hidden: false
+},
   "secret-project": {
     overview: "Hidden Easter Egg Project. This is a fun surprise!",
     techStack: "Classified",
@@ -204,6 +280,81 @@ function openProject(projectId) {
       `;
     tech_stack.innerHTML = `<br><p>* Backend: .NET 7 </p><br><p>* Frontend: Angular 15</p><br><p>* Database: Sql Server</p> `;
     challenges.innerHTML = `<br><p>We faced the critical challenge of ensuring the logistics are completed within the limited lifespan of milk</p>`;
+  } else if (projectId == 'Warehouse') {
+ overview.innerHTML =`<p>
+  This project focuses on real-time monitoring and management of warehouse conditions by synchronizing data from company-installed IoT devices.
+  It continuously tracks critical parameters such as warehouse temperature, door status, battery percentage, and power supply status (mains on/off).
+  </p>
+  <br>
+  <p>
+  Based on these parameters, the system generates alerts for responsible personnel. If an issue is not resolved within a defined time period,
+  alerts are automatically escalated to higher authorities, ensuring proactive issue resolution and operational safety.
+  </p>
+  <h3>Key Features:</h3>
+  <br>
+  <p>(1) Real-Time Device Data Sync: Seamless synchronization of warehouse device data including temperature, door open/close status, battery health, and power supply status.</p>
+  <br>
+  <p>(2) Alert & Escalation System: Configurable alert levels with automatic escalation if issues are not resolved within the specified SLA time.</p>
+  <br>
+  <p>(3) Interactive Monitoring Dashboard: A visually rich dashboard to monitor warehouse temperature trends, device health, and active alerts in real time.</p>
+  <br>
+  <p>(4) Warehouse Performance Insights: Identification of top-performing and critical warehouses based on temperature stability and alert frequency.</p>
+  <br>
+  <p>(5) Multi-Database Support: Efficient handling of device and alert data across multiple databases.</p>
+  `;
+    tech_stack.innerHTML = `
+    <p><strong>Backend API:</strong> .NET 8</p>
+  <p><strong>Background Services:</strong> .NET 8 Worker Service (Device Data Sync & Alert Processing)</p>
+  <p><strong>Frontend:</strong> Angular 9</p>
+  <p><strong>Databases:</strong> SQL Server, PostgreSQL, MongoDB</p>
+  <p><strong>Caching:</strong> Redis</p>
+    `;
+    challenges.innerHTML = `<br><p>* Real-Time Data Synchronization: Ensuring timely and accurate data sync from multiple IoT devices across various warehouses.</p>
+    <br><p>* Alert Escalation Logic: Implementing a robust alert system that escalates issues based on configurable SLA times.</p>
+    <br><p>* Multi-Database Management: Efficiently handling data across different database systems while maintaining performance and reliability.</p>`;
+
+  } else if(projectId == 'SecureLock') {
+    overview.innerHTML = ` <p>
+  This project enhances milk transportation security by integrating a digital secure lock system on vehicles,
+  ensuring milk quality and purity from the collection center to the plant without any compromise during transit.
+  </p>
+  <br>
+  <p>
+  The system combines secure lock hardware, GPS tracking, and geofencing to ensure that vehicle access is strictly
+  controlled and monitored throughout the journey.
+  </p>
+  <h3>Key Features:</h3>
+  <br>
+  <p>(1) Digital Secure Lock System: Vehicles are equipped with smart digital locks that can be opened only by authorized personnel using biometric authentication (fingerprint) or a secure hardware key.</p>
+  <br>
+  <p>(2) Location-Based Lock Control: The secure lock can be unlocked only when the vehicle reaches the authorized plant location or predefined geofenced areas.</p>
+  <br>
+  <p>(3) GPS-Based Route Tracking: Real-time GPS tracking of vehicles ensures continuous monitoring of vehicle movement during milk transportation.</p>
+  <br>
+  <p>(4) Route Deviation & Unauthorized Stop Alerts: Automatic alerts are generated if a vehicle deviates from the assigned route or stops at an unauthorized location instead of defined stoppages.</p>
+  <br>
+  <p>(5) Real-Time Alerts & Notifications: Immediate alerts are sent to responsible authorities in case of security breaches, route diversion, or lock tampering.</p>
+  <br>
+  <p>(6) Vehicle Breakdown & Failure Handling: The system supports reporting and monitoring of vehicle breakdowns or failures to ensure quick response and minimal disruption.</p>
+  <br>
+  <p>(7) Mobile Application for Conductors: A dedicated mobile app allows conductors to view assigned routes, live vehicle location, stoppages, and alerts in real time.</p>
+  `;
+    tech_stack.innerHTML = ` <p><strong>Frontend:</strong> Angular 17</p>
+  <p><strong>Backend API:</strong> .NET 8</p>
+  <p><strong>Background Services:</strong> .NET 8 Worker Service (GPS Tracking, Lock Events, Alerts)</p>
+  <p><strong>Databases:</strong> SQL Server, MongoDB</p>
+  <p><strong>Devices & Hardware:</strong> Secure Lock Device, Secure Hardware Key, GPS Device</p>
+  <p><strong>Mobile Application:</strong> Android (Conductor App)</p>`;
+    challenges.innerHTML = `<p>(1) Secure Hardware & GPS Integration:  
+Ensuring reliable integration between digital lock hardware, biometric authentication, GPS devices, and backend services while handling network instability and real-time data synchronization.</p>
+<br>
+
+<p>(2) Accurate Geofencing & Route Deviation Detection:  
+Maintaining precise location-based lock control and detecting route deviations or unauthorized stoppages without false alerts due to GPS inaccuracies.</p>
+<br>
+
+<p>(3) Real-Time Alerting & System Scalability:  
+Designing a scalable alert and escalation mechanism with .NET 8 background services that processes high-frequency GPS and device events without performance degradation.</p>`;
   }
   else {
     overview.innerHTML = '<P>No Data Found!</p>'
